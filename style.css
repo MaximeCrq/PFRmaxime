@@ -16,23 +16,23 @@ body {
     background-color: #E0FCFC;
 }
 
-h1 {
+/* h1 {
+    background-color: blue;
+} */
+
+/* h2 {
 
 }
 
-h2 {
+h3 { 
 
-}
-
-h3 {
-
-}
+} */
 
 a {
     text-decoration: none;
 }
 
-.entete,
+.en-tete,
 .pied-de-page {
   background-color: #F7DCB9;
 }
