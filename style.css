@@ -20,11 +20,11 @@ body {
     background-color: blue;
 } */
 
-/* h2 {
-
+h2 {
+    margin-top: 5%;
 }
 
-h3 { 
+/* h3 { 
 
 } */
 
@@ -37,3 +37,22 @@ a {
   background-color: #F7DCB9;
 }
 
+.en-tete {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+.pied-de-page {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
+.onglet1 {
+    margin-top: 5%;
+    grid-template-columns: repeat(7, auto);
+    display: grid; 
+    margin-left: 20%;
+    margin-right: 20%;
+}
