@@ -43,6 +43,10 @@ a {
     width: 100%;
 }
 
+.logo {
+    float: left;
+}
+
 .footer {
     position: absolute;
     bottom: 0%;
