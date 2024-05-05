@@ -17,7 +17,7 @@ body {
 }
 
 /* h1 {
-    background-color: blue;
+    
 } */
 
 h2 {
@@ -38,14 +38,26 @@ a {
 }
 
 .header {
-    position: absolute;
-    top: 0%;
-    width: 100%;
+    display: flex; /*flexbox pour orga*/
+    justify-content: center; /*aligne à partir de ...*/
+    align-items: center; /*centre verticalement*/
+    background-color: #F7DCB9;
+    padding: 10px; 
 }
 
-.logo {
-    float: left;
+.logo input {
+    margin-right: 10px; 
+    width: 100px;
+    height: auto;
 }
+
+.titre {
+    margin-left: 42%; 
+    margin-right: auto; 
+}
+
+/*FAIRE EN SORTE QUE LE TITRE S'aligne sans prendre en 
+compte la largeur du logo*/
 
 .footer {
     position: absolute;
