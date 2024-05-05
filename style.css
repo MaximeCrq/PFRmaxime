@@ -32,12 +32,12 @@ a {
     text-decoration: none;
 }
 
-.header,
-.footer {
+header,
+footer {
   background-color: #F7DCB9;
 }
 
-.header {
+header {
     display: flex; /*flexbox pour orga*/
     justify-content: center; /*aligne à partir de ...*/
     align-items: center; /*centre verticalement*/
@@ -59,10 +59,15 @@ a {
 /*FAIRE EN SORTE QUE LE TITRE S'aligne sans prendre en 
 compte la largeur du logo*/
 
-.footer {
+footer {
     position: absolute;
     bottom: 0%;
     width: 100%;
+}
+
+.contact {
+    float: left;
+    margin-left: 5%;
 }
 
 .onglet1 {
