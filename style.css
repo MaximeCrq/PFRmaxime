@@ -37,23 +37,26 @@ footer {
   background-color: #F7DCB9;
 }
 
+
+
 header {
-    display: flex; /*flexbox pour orga*/
-    justify-content: center; /*aligne à partir de ...*/
-    align-items: center; /*centre verticalement*/
-    background-color: #F7DCB9;
-    padding: 10px; 
+    grid-template-columns: repeat(3, auto);
+    display: grid;
 }
 
 .logo input {
-    margin-right: 10px; 
+    float: left;
     width: 100px;
     height: auto;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    margin-left: 5%;
 }
 
-.titre {
-    margin-left: 42%; 
-    margin-right: auto; 
+.titre h1 {
+    margin-top: 7%;
+    margin-bottom: 7%;
+    margin-right: 13%;
 }
 
 /*FAIRE EN SORTE QUE LE TITRE S'aligne sans prendre en 
