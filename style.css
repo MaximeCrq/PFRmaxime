@@ -3,7 +3,6 @@
     padding: 0;
   }
 
-
   html,
 body {
     width: 100%;
@@ -24,22 +23,20 @@ h2 {
     margin-top: 5%;
 }
 
-/* h3 { 
-
-} */
-
 a {
     text-decoration: none;
 }
 
-header,
-footer {
-  background-color: #ffe4c3;
+header {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffe4c3;
 }
 
-header {
-    grid-template-columns: repeat(5, auto);
-    display: grid;
+.logo {
+    flex-basis: 10%;
 }
 
 .logo input {
@@ -48,7 +45,13 @@ header {
     height: auto;
     margin-top: 2%;
     margin-bottom: 2%;
-    margin-left: 5%;
+    margin-left: 8%;
+}
+
+.titre {
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 7%;
 }
 
 .titre h1 {
@@ -59,31 +62,43 @@ header {
 }
 
 .onglet2 {
-    margin-top: 10%;
-    margin-bottom: 5%;
-    grid-template-columns: repeat(2, auto);
-    display: grid;
-    margin-right: 5%;
-    margin-left: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1%;
 }
 
-/*FAIRE EN SORTE QUE LE TITRE S'aligne sans prendre en 
-compte la largeur du logo*/
+.onglet1 {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffe4c3;
+    padding: 20px;
+    margin-top: 80px;
+}
 
 .first {
-    text-decoration-line: underline;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 footer {
-    position: absolute;
-    bottom: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffe4c3;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
-  }
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
 
 .element {
     display: flex;
@@ -97,20 +112,3 @@ footer {
 .element.deux {
     align-self: center;
 }
-
-
-
-.contact {
-    float: left;
-    margin-left: 5%;
-}
-
-.onglet1 {
-    margin-top: 1%;
-    grid-template-columns: repeat(5, auto);
-    display: grid; 
-    margin-left: 20%;
-    margin-right: 20%;
-    background-color: #ffe4c3;
-}
-
