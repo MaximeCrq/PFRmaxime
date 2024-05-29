@@ -13,12 +13,12 @@ body {
     text-align: center;
     font-family: 'Raleway';
     font-size: 1em;
-    background-color: #E0FCFC;
+    background-color: #f7f7f7;
 }
 
-/* h1 {
-    
-} */
+h1 {
+    text-align: center;
+} 
 
 h2 {
     margin-top: 5%;
@@ -34,13 +34,11 @@ a {
 
 header,
 footer {
-  background-color: #F7DCB9;
+  background-color: #ffe4c3;
 }
 
-
-
 header {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(5, auto);
     display: grid;
 }
 
@@ -48,8 +46,8 @@ header {
     float: left;
     width: 100px;
     height: auto;
-    margin-top: 7%;
-    margin-bottom: 7%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     margin-left: 5%;
 }
 
@@ -57,10 +55,24 @@ header {
     margin-top: 7%;
     margin-bottom: 7%;
     margin-right: 13%;
+    margin-left: 20%;
+}
+
+.onglet2 {
+    margin-top: 10%;
+    margin-bottom: 5%;
+    grid-template-columns: repeat(2, auto);
+    display: grid;
+    margin-right: 5%;
+    margin-left: 50%;
 }
 
 /*FAIRE EN SORTE QUE LE TITRE S'aligne sans prendre en 
 compte la largeur du logo*/
+
+.first {
+    text-decoration-line: underline;
+}
 
 footer {
     position: absolute;
@@ -68,15 +80,37 @@ footer {
     width: 100%;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.element {
+    display: flex;
+    flex-direction: column;
+}
+
+.element.un {
+    align-self: flex-start;
+}
+
+.element.deux {
+    align-self: center;
+}
+
+
+
 .contact {
     float: left;
     margin-left: 5%;
 }
 
 .onglet1 {
-    margin-top: 5%;
-    grid-template-columns: repeat(7, auto);
+    margin-top: 1%;
+    grid-template-columns: repeat(5, auto);
     display: grid; 
     margin-left: 20%;
     margin-right: 20%;
+    background-color: #ffe4c3;
 }
+
