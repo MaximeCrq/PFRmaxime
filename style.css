@@ -28,7 +28,7 @@ a {
 }
 
 header {
-    height: 10%;
+    height: 12%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,6 +37,15 @@ header {
 
 .logo {
     flex-basis: 10%;
+    flex: 1 1 auto;
+}
+
+.titre {
+    flex: 1 1 auto;
+}
+
+.connect {
+    flex: 1 1 auto;
 }
 
 .logo input {
@@ -48,31 +57,48 @@ header {
     margin-left: 8%;
 }
 
-.titre {
-    flex-grow: 1;
-    text-align: center;
-    margin-right: 7%;
-}
-
 .titre h1 {
     margin-top: 7%;
     margin-bottom: 7%;
     margin-right: 13%;
     margin-left: 20%;
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 7%;
 }
 
-.onglet2 {
+.connect {
     display: flex;
     justify-content: flex-end;
     margin-right: 1%;
 }
 
-.onglet1 {
+.nav1 {
     display: flex;
     justify-content: space-around;
     background-color: #ffe4c3;
     padding: 20px;
     margin-top: 80px;
+}
+
+.accueil {
+    flex: 1 1 auto;
+}
+
+.map {
+    flex: 1 1 auto;
+}
+
+.advice {
+    flex: 1 1 auto;
+}
+
+.photo {
+    flex: 1 1 auto;
+}
+
+.faq {
+    flex: 1 1 auto;
 }
 
 .first {
