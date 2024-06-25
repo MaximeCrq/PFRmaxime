@@ -49,6 +49,18 @@ footer .footer-1 ul:nth-child(3) {
     list-style: none;
 }
 
+footer .footer-1 .liste-reseaux-sociaux {
+    display: flex;
+    flex-direction: row;
+    img {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        width: 4em;
+        height: 4em;
+        border-radius: 10px;
+    }
+}
+
 footer .footer-2 {
     height: 20%;
     background-color: rgb(12, 12, 12);
