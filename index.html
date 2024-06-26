@@ -4,20 +4,104 @@
         <meta charset="UTF-8"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
         <meta name="viewport" content="width=device-width, initial scale=1.0"> 
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/header.css">
-        <link rel="stylesheet" href="./css/footer.css"> 
-        <title>toutoutrajet</title> 
-        <script src="./script/script.js"></script>
+        <link rel="stylesheet" href="./css/index.css">
+        <title>toutoutrajet</title>
     </head> 
 
     <body>
-        <header></header>
+        <header>
+            <nav>
+                <a href="#" class="header-element" id="logo-toutoutrajet">
+                    <img src="../../image/logo-toutoutrajet-2.png" alt="logo du site du projet">
+                </a>
+                <a href="#accueil" class="header-element" id="titre-toutoutrajet">
+                    <h1>TouTouTrajet</h1>
+                </a>
+                <ul class="header-element" class="liste-1" id="liste-1">
+                    <li><a href="#accueil">ACCUEIL</a></li>
+                    <li><a href="./page/carte.html">CARTE</a></li>
+                    <li><a href="./page/conseil.html">CONSEIL</a></li>
+                    <li><a href="./page/photo.html">PHOTO</a></li> 
+                    <li><a href="./page/FAQ.html">FAQ</a></li>
+                </ul>
+                <div></div>
+                <ul class="header-element" class="liste-2" id="liste-2">
+                    <li><a href="./page/connexion.html">CONNEXION</a></li>
+                    <li><a href="./page/inscription.html">INSCRIPTION</a></li>
+                </ul>
+            </nav>
+        </header>
 
         <main>
-            
+            <div class="accueil">
+                <div class="carousel">
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Section 1
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Contenu de la section 1.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Section 2
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Contenu de la section 2.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Section 3
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Contenu de la section 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
-        <footer></footer>
+        <footer>
+            <div class="footer-1">
+                <ul>
+                    <li><h4>TouTouTrajet</h4></li>
+                    <li><img src="../../image/logo-toutoutrajet-2.png" alt="logo du site du projet"></li>
+                </ul>
+                <ul>
+                    <li><h4>Navigation</h4></li>
+                    <li>Accueil</li>
+                    <li>Carte</li>
+                    <li>Conseil</li>
+                    <li>Photo</li>
+                    <li>FAQ</li>
+                </ul>
+                <ul>
+                    <li>Nous contacter</li>
+                    <li>Premier pas sur TouTouTrajet</li>
+                </ul>
+                <div class="liste-reseaux-sociaux">
+                    <a><img src="../../image/logo-instagram.png" alt="lien vers le compte de TouTouTrajet sur Instagram"></a>
+                    <a><img src="../../image/logo-twitter.webp" alt="lien vers le compte de TouTouTrajet Twitter"></a>
+                    <a><img src="../../image/logo-facebook.png" alt="lien vers le compte de TouTouTrajet Facebook"></a>
+                </div>
+            </div>
+            <div class="footer-2">
+                <ul>
+                    <li>Copyright @ 2024-2025 - Tous droits réservés.</li>
+                    <li>Mentions légales</li>
+                    <li>CGV</li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="./script/index.js"></script>
     </body>
 </html>
