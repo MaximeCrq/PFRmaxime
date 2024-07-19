@@ -120,85 +120,46 @@ header li:hover {
 }
 
 
-/* -----------------ACCUEIL----------------- */
-main .accueil {
+/* -----------------MAIN----------------- */
+
+
+/* pas de défilement horizontal*/
+html, body {
+    overflow-x: hidden;
+}
+
+main {
+    margin: 0 auto;
+    margin-top: 100px;
+    max-width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+
 }
 
-.accordion {
+main .separator {
+    margin: 30px 0px 30px 0px;
+    background-color: brown;
     width: 300px;
+    height: 4px;
 }
 
-.accordion-item {
-    border: 1px solid #ccc;
-    margin-bottom: 5px;
-}
-
-.accordion-header {
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-    background-color: #f1f1f1;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 16px;
+main section {
+    background-color: blue;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: break-word; /* Assurez-vous que le texte se retourne et ne dépasse pas */
+    h2 , p { 
+        padding: 10px 20% 10px 20%; /*haut droite bas gauche*/
+    }
 }
 
-.accordion-header .arrow {
-    transition: transform 0.3s ease;
-}
 
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-}
-
-.accordion-content.open {
-    max-height: 500px; /* Une hauteur suffisamment grande pour contenir le contenu */
-}
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
-
-/* -----------------FOOTER----------------- */
 
 /* -----------------FOOTER----------------- */
 
