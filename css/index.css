@@ -136,7 +136,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 main .separator {
@@ -146,8 +145,13 @@ main .separator {
     height: 4px;
 }
 
+main img {
+    width: 60%;
+    height: auto;
+    border: 1px solid black;
+}
+
 main section {
-    background-color: blue;
     display: flex;
     flex-direction: column;
     align-items: center;
