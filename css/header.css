@@ -73,6 +73,9 @@ header li:hover {
 }
 
 @media screen and (max-width: 800px) {
+    header {
+        height: 20vw;
+    }
     header nav {
         height: 24vw;
         grid-template-columns: repeat(4, 15vw 15vw 40vw 30vw);
