@@ -16,3 +16,20 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error('Erreur lors du chargement du footer:', error));
 });
 
+
+const accordion = document.getElementsByClassName('accordion-item');
+const panel = document.getElementsByClassName('panel');
+
+for (let i=0 ; i<panel.length ; i++) {
+  panel[i].style.display = 'none';
+}
+
+for (let i=0 ; i<panel.length ; i++) {
+  accordion[i].addEventListener('click', function(){
+    if (panel[i].style.display == 'none') {
+      panel[i].style.display = 'block';
+    } else {
+      panel[i].style.display = 'none';
+    }
+  })
+}
