@@ -78,6 +78,9 @@ header li:hover {
 }
 
 @media screen and (max-width: 800px) {
+    header {
+        height: 20vw;
+    }
     header nav {
         height: 24vw;
         grid-template-columns: repeat(4, 15vw 15vw 40vw 30vw);
@@ -126,6 +129,7 @@ header li:hover {
 /* pas de défilement horizontal*/
 html, body {
     overflow-x: hidden;
+    font-size: calc(10px + 0.4vw);
 }
 
 main {
@@ -163,7 +167,11 @@ main section {
     }
 }
 
-
+@media screen and (max-width: 800px) {
+    body main {
+        font-size: 17px;
+    }
+}
 
 /* -----------------FOOTER----------------- */
 
@@ -263,8 +271,24 @@ footer .footer-2 {
     }
 }
 
-
-
 footer .footer-2 ul li:not(:nth-child(1)) {
     color: rgb(228, 189, 118);
+}
+
+@media screen and (max-width: 800px) {
+    footer .footer-1 ul:nth-child(1) {
+        display: none;
+    }
+    footer .footer-1 ul:nth-child(2) {
+        display: none;
+    }
+    footer .footer-1 ul:nth-child(3) {
+        font-size: calc(10px + 1vw);
+    }
+    footer .footer-1 .liste-reseaux-sociaux img {
+        width: 6em;
+        height: 6em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
 }

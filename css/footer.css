@@ -88,8 +88,24 @@ footer .footer-2 {
     }
 }
 
-
-
 footer .footer-2 ul li:not(:nth-child(1)) {
     color: rgb(228, 189, 118);
+}
+
+@media screen and (max-width: 800px) {
+    footer .footer-1 ul:nth-child(1) {
+        display: none;
+    }
+    footer .footer-1 ul:nth-child(2) {
+        display: none;
+    }
+    footer .footer-1 ul:nth-child(3) {
+        font-size: calc(10px + 1vw);
+    }
+    footer .footer-1 .liste-reseaux-sociaux img {
+        width: 6em;
+        height: 6em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
 }
