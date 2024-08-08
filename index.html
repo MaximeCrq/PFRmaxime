@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr"> 
     <head> 
-        <meta charset="UTF-8"> 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-        <meta name="viewport" content="width=device-width, initial scale=1.0"> 
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="./css/index.css">
         <title>toutoutrajet</title>
-        <script src="./script/index.js" defer></script>
     </head> 
 
     <body>
@@ -18,7 +15,7 @@
                 <a href="#accueil" class="header-element" id="titre-toutoutrajet">
                     <h1>TouTouTrajet</h1>
                 </a>
-                <ul class="header-element" class="liste-1" id="liste-1">
+                <ul class="header-element" id="liste-1">
                     <li><a href="#accueil">ACCUEIL</a></li>
                     <li><a href="./page/carte.html">CARTE</a></li>
                     <li><a href="./page/conseil.html">CONSEIL</a></li>
@@ -26,7 +23,7 @@
                     <li><a href="./page/FAQ.html">FAQ</a></li>
                 </ul>
                 <div></div>
-                <ul class="header-element" class="liste-2" id="liste-2">
+                <ul class="header-element" id="liste-2">
                     <li><a href="./page/connexion.html">CONNEXION</a></li>
                     <li><a href="./page/inscription.html">INSCRIPTION</a></li>
                 </ul>
@@ -34,50 +31,46 @@
         </header>
 
         <main>
-            <section id="featured-images" role="region" aria-roledescription="carousel" aria-label="Carrousel de photo de chien">
+            <section id="featured-images">
                 
                 <div class="carousel">
                   
-                    <button class="carousel-button prev-button" aria-label="Slide précédent">
-                        <span aria-hidden="true">←</span>
-                    </button>
+                    <img src="./image/fleche.png" alt="boutton image precedente" class="carousel-button" id="prev-button">
                   
                     <div class="carousel-items">
                     
-                    <article class="carousel-item" role="group" aria-roledescription="slide" aria-label="Produit 1" tabindex="-1">
-                        <img src="image1-thumbnail.jpg" data-src="image1.jpg" alt="Description de l'image 1" class="carousel-image lazyload" loading="lazy">
-                        <h3 class="image-title">Titre du produit 1</h3>
-                        <p class="image-description">Description ou informations sur le produit 1.</p>
-                        <a href="lien-produit-1.html" class="image-link" aria-label="Voir plus sur le produit 1">Voir plus</a>
-                    </article>
-                    
-                    <article class="carousel-item" role="group" aria-roledescription="slide" aria-label="Produit 2" tabindex="-1">
-                        <img src="image2-thumbnail.jpg" data-src="image2.jpg" alt="Description de l'image 2" class="carousel-image lazyload" loading="lazy">
-                        <h3 class="image-title">Titre du produit 2</h3>
-                        <p class="image-description">Description ou informations sur le produit 2.</p>
-                        <a href="lien-produit-2.html" class="image-link" aria-label="Voir plus sur le produit 2">Voir plus</a>
-                    </article>
+                        <article id="carousel-item-1">
+                            <img src="./image/carousel/image1.jpg" alt="Description de l'image 1" class="carousel-image">
+                            <h3 class="image-title">Titre du produit 1</h3>
+                        </article>
+                        
+                        <article id="carousel-item-2">
+                            <img src="./image/carousel/image2.jpg" alt="Description de l'image 2" class="carousel-image">
+                            <h3 class="image-title">Titre du produit 2</h3>
+                        </article>
+
+                        <article id="carousel-item-3">
+                            <img src="./image/carousel/image3.jpg" alt="Description de l'image 3" class="carousel-image">
+                            <h3 class="image-title">Titre du produit 3</h3>
+                        </article>
 
                     </div>
 
-                    <button class="carousel-button next-button" aria-label="Slide suivant">
-                        <span aria-hidden="true">→</span>
-                    </button>
+                    <img src="./image/fleche.png" alt="boutton image suivante" class="carousel-button" id="next-button">
 
                 </div>
                 
                 <div class="carousel-indicators">
-                    <button class="indicator-button" aria-label="Voir l'image 1" aria-controls="featured-images" aria-selected="true" tabindex="0"></button>
-                    <button class="indicator-button" aria-label="Voir l'image 2" aria-controls="featured-images" tabindex="-1"></button>
-                    <!-- Ajoutez d'autres indicateurs ici -->
+                    <button class="indicator-button indicator-button-image1"></button>
+                    <button class="indicator-button indicator-button-image2"></button>
+                    <button class="indicator-button indicator-button-image3"></button>
                 </div>
 
-              </section>
-              
-              
-            <img src="./image/image-chien-2.jpg" alt="image d'accueil du site de promenade de chien">
-            <div class="separator"></div>
-            <section>
+            </section>
+
+            <div class="separator separator1"></div>
+
+            <section class="welcome">
                 <h2>Bienvenue !</h2>
                 <p>
                     Bienvenue sur notre site dédié aux passionnés de chiens et aux amoureux des promenades en plein air !
@@ -98,7 +91,9 @@
                     Rejoignez notre communauté et explorez un monde où chaque promenade devient une nouvelle aventure !
                 </p>
             </section>
+
             <div class="separator"></div>
+
             <section>
                 <h2>Explorez les meilleurs lieux de promenade pour chiens</h2>
                 <p>
@@ -151,5 +146,7 @@
                 </ul>
             </div>
         </footer>
+
+        <script src="./script/index.js"></script>
     </body>
 </html>

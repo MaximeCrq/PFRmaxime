@@ -125,8 +125,7 @@ header li:hover {
 
 /* -----------------MAIN----------------- */
 
-
-/* pas de défilement horizontal*/
+/* pas de défilement horizontal + taille texte adaptative avec l'ajout de 10px */
 html, body {
     overflow-x: hidden;
     font-size: calc(10px + 0.4vw);
@@ -149,10 +148,8 @@ main .separator {
     height: 4px;
 }
 
-main img {
-    width: 60%;
-    height: auto;
-    border: 1px solid black;
+main:nth-child(2) { 
+    margin-top: 100px;  /*espacement apres le carousel (selectionnne le premier separator)*/
 }
 
 main section {
@@ -173,7 +170,46 @@ main section {
     }
 }
 
-/* -----------------FOOTER----------------- */
+/* -----------------MAIN-CAROUSEL----------------- */
+
+main .carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel .carousel-button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.carousel #prev-button {
+    transform: rotate(180deg);
+}
+
+.carousel-items article img {
+    width: 598px;
+    height: 298px; /*on enleve 2 px pour prendre en compte la taille de la "border"*/
+    border: 1px solid black;
+}
+
+.carousel-items {
+    overflow: hidden;
+    background-color: rgb(183, 221, 221);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 340px;
+}
+
+.carousel-items > * {
+    position: absolute;
+    transition: all 0.5s ease-out;
+}
 
 /* -----------------FOOTER----------------- */
 
