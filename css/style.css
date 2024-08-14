@@ -43,6 +43,15 @@ main .separator {
 
 /* -----------------CARTE----------------- */
 
+#main-map {
+    margin-top: 5%;
+}
+
+#map {
+    height: calc(100px + 30vw);
+    width: 60%;
+}
+
 /* -----------------CONSEIL----------------- */
 
 .conseil .accordion .accordion-item {
