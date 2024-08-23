@@ -57,3 +57,6 @@ function prev(){//fonction permettant de déplacer le carousel vers la droite
         return limiteDeplacement--;
     }
 }
+
+//-----INDICATORS-BUTTON-------
+

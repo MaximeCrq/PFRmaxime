@@ -211,6 +211,16 @@ main .carousel {
     transition: all 0.5s ease-out;
 }
 
+.carousel-indicators {
+    background-color: aqua;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.753);
+}
+
 /* -----------------FOOTER----------------- */
 
 /* -----------------FOOTER----------------- */
