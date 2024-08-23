@@ -211,13 +211,14 @@ main .carousel {
     transition: all 0.5s ease-out;
 }
 
-.carousel-indicators {
+/* #carousel-indicators {
     background-color: aqua;
-}
+} */
 
-.carousel-indicators button {
-    width: 10px;
-    height: 10px;
+#carousel-indicators button {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
     background-color: rgba(0, 0, 0, 0.753);
 }
 

@@ -60,3 +60,22 @@ function prev(){//fonction permettant de déplacer le carousel vers la droite
 
 //-----INDICATORS-BUTTON-------
 
+//---Creation du nombre de bouton en fonction du nombre d'image
+const carouselI = document.querySelector('#carousel-indicators');
+
+for (i=1 ; i<=nbrImg ; i++) {
+    let createButtonIndicator = document.createElement('button');
+    carouselI.append(createButtonIndicator);
+}
+
+const buttonI = document.querySelectorAll('button');
+
+for (i=0 ; i<nbrImg ; i++) {
+    buttonI[i].className = `indicator-button indicator-button-image${i+1}`;
+}
+
+//----fonction des boutons----
+
+function button () {
+    
+}
