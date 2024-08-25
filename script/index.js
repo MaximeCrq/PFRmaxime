@@ -42,6 +42,13 @@ function next(){//fonction permettant de déplacer le carousel vers la gauche
             positionImages=positionImages+600;
         }
         positionImages = x - 600;
+
+        //modif couleur bouton indicators
+        for (let j=1 ; j<=nbrImg ; j++){
+            document.querySelector(`.indicator-button-image${j}`).style.backgroundColor = 'black';
+        }
+        document.querySelector(`.indicator-button-image${1+(limiteDeplacement+1)}`).style.backgroundColor = 'white';
+
         return limiteDeplacement++;
     }
 }
@@ -55,6 +62,13 @@ function prev(){//fonction permettant de déplacer le carousel vers la droite
             positionImages=positionImages+600;
         }
         positionImages = x + 600;
+
+        //modif couleur bouton indicators
+        for (let j=1 ; j<=nbrImg ; j++){
+            document.querySelector(`.indicator-button-image${j}`).style.backgroundColor = 'black';
+        }
+        document.querySelector(`.indicator-button-image${(limiteDeplacement)}`).style.backgroundColor = 'white';
+        
         return limiteDeplacement--;
     }
 }
@@ -75,31 +89,31 @@ for (i=0 ; i<nbrImg ; i++) {
     buttonI[i].className = `indicator-button indicator-button-image${i+1}`;
 }
 
-//----fonction des boutons----
-//    document.querySelector(`#carousel-item-${i}`)
-const zerzer = document.querySelector(`.indicator-button-image${1}`);
+//initialisation de la couleur du bouton indicator
+document.querySelector(`.indicator-button-image${1}`).style.backgroundColor = 'white';
 
-function button1 () {
-    let pos = 0 ;
-    for (let i=1 ; i<=nbrImg ; i++){
-        document.querySelector(`#carousel-item-${i}`).style.left = `${pos}px`;
-        pos = pos+600;
-    }
-    positionImages = 0;//remise à 0 de la valeur
-    return limiteDeplacement= 0;//remise à 0 de la valeur
-}
+//----fonction des boutons indicators----
 
-zerzer.addEventListener('click', button1);
-
-
+//fonction 1 -- modif position
 for (let i=1 ; i<=nbrImg ; i++){
-    document.querySelector(`.indicator-button-image${i}`).addEventListener('click', function buttonIndicator(){
-        let pos = -600*(i-1);
+    document.querySelector(`.indicator-button-image${i}`).addEventListener('click', function() {
+        let pos = (-600)*(i-1);
         for (let i=1 ; i<=nbrImg ; i++){
             document.querySelector(`#carousel-item-${i}`).style.left = `${pos}px`;
             pos = pos+600;
         }
-        positionImages = 600*(i-1);
-        return limiteDeplacement= i-1;
+        positionImages = (-600)*(i-1);
+        limiteDeplacement= i-1;
     })
 }
+
+//fonction 2 -- modif couleur bouton
+for (let i=1 ; i<=nbrImg ; i++){
+    document.querySelector(`.indicator-button-image${i}`).addEventListener('click', function() {
+        for (let j=1 ; j<=nbrImg ; j++){
+            document.querySelector(`.indicator-button-image${j}`).style.backgroundColor = 'black';
+        }
+        document.querySelector(`.indicator-button-image${i}`).style.backgroundColor = 'white';
+    })
+}
+
