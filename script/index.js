@@ -116,4 +116,3 @@ for (let i=1 ; i<=nbrImg ; i++){
         document.querySelector(`.indicator-button-image${i}`).style.backgroundColor = 'white';
     })
 }
-
