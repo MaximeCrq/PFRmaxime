@@ -69,3 +69,43 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 //apprendre les fonction de leaflet.js pourpouvoir personnaliser la carte (chemin, filtre,etc ...)
+
+
+
+
+//-----------------CONNEXION/INSCRIPTION------------------
+
+const loginInput = document.querySelector('#inputEmail');
+const passwordInput = document.querySelector('#inputPassword');
+const userMessage = document.querySelector('#userMessage');
+
+//vérification email
+loginInput.addEventListener('keyup',()=>{ 
+// Ajoute un écouteur d'événements pour détecter les frappes de touches sur le champ de saisie de l'email
+    const regex = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/; 
+// Définit une expression régulière pour valider le format de l'email
+    if (regex.test(loginInput.value)) { 
+// Vérifie si la valeur saisie correspond à l'expression régulière
+        loginInput.style.backgroundColor = 'green'; 
+// Change la couleur de fond en vert si l'email est valide
+    }   else { // Si l'email est invalide
+        loginInput.style.backgroundColor = 'red'; 
+        // Change la couleur de fond en rouge
+    }
+})
+
+//vérification MDP
+passwordInput.addEventListener('keyup',()=>{ 
+// Ajoute un écouteur d'événements pour détecter les frappes de touches sur le champ de saisie de le MDP
+    const charDecimal = /\d/;
+    const charSpecial = /[$&@!]/;
+// Définit une expression régulière pour valider le format de le MDP
+    if (charDecimal.test(passwordInput.value) && charSpecial.test(passwordInput.value)) { 
+// Vérifie si la valeur saisie correspond à l'expression régulière
+        passwordInput.style.backgroundColor = 'green'; 
+// Change la couleur de fond en vert si le MDP est valide
+    }   else { // Si le MDP est invalide
+        passwordInput.style.backgroundColor = 'red'; 
+        // Change la couleur de fond en rouge
+    }
+})
