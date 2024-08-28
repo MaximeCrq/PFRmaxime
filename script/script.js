@@ -94,18 +94,28 @@ loginInput.addEventListener('keyup',()=>{
     }
 })
 
-//vérification MDP
-passwordInput.addEventListener('keyup',()=>{ 
-// Ajoute un écouteur d'événements pour détecter les frappes de touches sur le champ de saisie de le MDP
-    const charDecimal = /\d/;
-    const charSpecial = /[$&@!]/;
-// Définit une expression régulière pour valider le format de le MDP
-    if (charDecimal.test(passwordInput.value) && charSpecial.test(passwordInput.value)) { 
-// Vérifie si la valeur saisie correspond à l'expression régulière
-        passwordInput.style.backgroundColor = 'green'; 
-// Change la couleur de fond en vert si le MDP est valide
-    }   else { // Si le MDP est invalide
-        passwordInput.style.backgroundColor = 'red'; 
-        // Change la couleur de fond en rouge
-    }
-})
+
+const conditionPassword1 = document.querySelector('#listeCondition').querySelectorAll('p');
+const arrayConditionPassword1 = Array.from(conditionPassword1);
+
+passwordInput.addEventListener('keyup',()=>{
+  const charDecimal = /\d/;
+  const charSpecial = /[$&@!-]/;
+  let errorMessage ='';
+  if(passwordInput.value.length<6){
+    arrayConditionPassword1[0].style.color = 'red';
+  } else {
+    arrayConditionPassword1[0].style.color = 'green';
+  }
+
+  if(!passwordInput.value.match(charDecimal)){
+    arrayConditionPassword1[1].style.color = 'red';
+  } else {
+    arrayConditionPassword1[1].style.color = 'green';
+  }
+  if(!passwordInput.value.match(charSpecial)){
+    arrayConditionPassword1[2].style.color = 'red';
+  } else {
+    arrayConditionPassword1[2].style.color = 'green';
+  }
+});
