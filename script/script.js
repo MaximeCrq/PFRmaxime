@@ -101,21 +101,68 @@ const arrayConditionPassword1 = Array.from(conditionPassword1);
 passwordInput.addEventListener('keyup',()=>{
   const charDecimal = /\d/;
   const charSpecial = /[$&@!-]/;
-  let errorMessage ='';
+  const charUpperCase = /[A-Z]/;
+  const noSpaces = /^\S*$/;
+  const forbiddenWords = ["password", "123456", "qwerty","azerty"];
+  const maxLength = 15;
+  //taille minimum du mdp
   if(passwordInput.value.length<6){
     arrayConditionPassword1[0].style.color = 'red';
   } else {
     arrayConditionPassword1[0].style.color = 'green';
   }
-
-  if(!passwordInput.value.match(charDecimal)){
+  //limiter le nombre de valeur
+  if(passwordInput.value.length > maxLength){
     arrayConditionPassword1[1].style.color = 'red';
   } else {
     arrayConditionPassword1[1].style.color = 'green';
   }
-  if(!passwordInput.value.match(charSpecial)){
+  //mdp doit contenir 1 chiffre min
+  if(!passwordInput.value.match(charDecimal)){
     arrayConditionPassword1[2].style.color = 'red';
   } else {
     arrayConditionPassword1[2].style.color = 'green';
   }
+  //mdp doit contenir un caractere special min
+  if(!passwordInput.value.match(charSpecial)){
+    arrayConditionPassword1[3].style.color = 'red';
+  } else {
+    arrayConditionPassword1[3].style.color = 'green';
+  }
+  //mdp doit contenir au moins une majuscule
+  if(!passwordInput.value.match(charUpperCase)){
+    arrayConditionPassword1[4].style.color = 'red';
+  } else {
+    arrayConditionPassword1[4].style.color = 'green';
+  }
+  //mdp ne doit pas contenir d'espaces
+  if(!passwordInput.value.match(noSpaces)){
+    arrayConditionPassword1[5].style.color = 'red';
+  } else {
+    arrayConditionPassword1[5].style.color = 'green';
+  }
+  //mdp ne doit pas contenir des mots courants interdits
+  if(forbiddenWords.some(word => passwordInput.value.toLowerCase().includes(word))){
+    arrayConditionPassword1[6].style.color = 'red';
+  } else {
+    arrayConditionPassword1[6].style.color = 'green';
+  }
+
+  //ajout de sécurité :
+  if(passwordInput.value.toLowerCase().includes('script')) {
+    alert("C'est pas gentil d'être méchant");
+    location.reload();
+  }
+});
+
+
+//apparition/disparition des conditions en fonction du focus
+
+
+passwordInput.addEventListener('focus', function() {
+  userMessage.style.opacity = 1;
+});
+
+passwordInput.addEventListener('blur', function() {
+  userMessage.style.opacity = 0;
 });
