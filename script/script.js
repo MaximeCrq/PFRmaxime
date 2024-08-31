@@ -75,94 +75,173 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //-----------------CONNEXION/INSCRIPTION------------------
 
-const loginInput = document.querySelector('#inputEmail');
-const passwordInput = document.querySelector('#inputPassword');
-const userMessage = document.querySelector('#userMessage');
-
-//vérification email
-loginInput.addEventListener('keyup',()=>{ 
-// Ajoute un écouteur d'événements pour détecter les frappes de touches sur le champ de saisie de l'email
-    const regex = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/; 
-// Définit une expression régulière pour valider le format de l'email
-    if (regex.test(loginInput.value)) { 
-// Vérifie si la valeur saisie correspond à l'expression régulière
-        loginInput.style.backgroundColor = 'green'; 
-// Change la couleur de fond en vert si l'email est valide
-    }   else { // Si l'email est invalide
-        loginInput.style.backgroundColor = 'red'; 
-        // Change la couleur de fond en rouge
-    }
-})
 
 
-const conditionPassword1 = document.querySelector('#listeCondition').querySelectorAll('p');
-const arrayConditionPassword1 = Array.from(conditionPassword1);
 
-passwordInput.addEventListener('keyup',()=>{
-  const charDecimal = /\d/;
-  const charSpecial = /[$&@!-]/;
-  const charUpperCase = /[A-Z]/;
-  const noSpaces = /^\S*$/;
-  const forbiddenWords = ["password", "123456", "qwerty","azerty"];
+
+//INSCRIPTION
+
+// Sélection des éléments du DOM
+const submitButtonInscription = document.getElementById('submitButtonInscription');
+
+const pseudoInputInscription = document.querySelector('#inputPseudoInscription');
+const loginInputInscription = document.querySelector('#inputEmailInscription');
+const passwordInputInscription = document.querySelector('#inputPasswordInscription');
+const passwordInputConfirmInscription = document.querySelector('#inputPasswordConfirmInscription');
+
+const conditionMessages = document.querySelector('#listeConditionPassword').querySelectorAll('p');
+
+// Désactiver le bouton de soumission au départ
+submitButtonInscription.disabled = true;
+
+
+// Fonction pour valider le pseudo
+function validatePseudo() {
+  const pseudo = pseudoInputInscription.value;
   const maxLength = 15;
-  //taille minimum du mdp
-  if(passwordInput.value.length<6){
-    arrayConditionPassword1[0].style.color = 'red';
-  } else {
-    arrayConditionPassword1[0].style.color = 'green';
-  }
-  //limiter le nombre de valeur
-  if(passwordInput.value.length > maxLength){
-    arrayConditionPassword1[1].style.color = 'red';
-  } else {
-    arrayConditionPassword1[1].style.color = 'green';
-  }
-  //mdp doit contenir 1 chiffre min
-  if(!passwordInput.value.match(charDecimal)){
-    arrayConditionPassword1[2].style.color = 'red';
-  } else {
-    arrayConditionPassword1[2].style.color = 'green';
-  }
-  //mdp doit contenir un caractere special min
-  if(!passwordInput.value.match(charSpecial)){
-    arrayConditionPassword1[3].style.color = 'red';
-  } else {
-    arrayConditionPassword1[3].style.color = 'green';
-  }
-  //mdp doit contenir au moins une majuscule
-  if(!passwordInput.value.match(charUpperCase)){
-    arrayConditionPassword1[4].style.color = 'red';
-  } else {
-    arrayConditionPassword1[4].style.color = 'green';
-  }
-  //mdp ne doit pas contenir d'espaces
-  if(!passwordInput.value.match(noSpaces)){
-    arrayConditionPassword1[5].style.color = 'red';
-  } else {
-    arrayConditionPassword1[5].style.color = 'green';
-  }
-  //mdp ne doit pas contenir des mots courants interdits
-  if(forbiddenWords.some(word => passwordInput.value.toLowerCase().includes(word))){
-    arrayConditionPassword1[6].style.color = 'red';
-  } else {
-    arrayConditionPassword1[6].style.color = 'green';
+  const allowedSpecialChars = /^[a-zA-Z0-9&!_-]+$/;
+  
+  // Vérifier la longueur du pseudo
+  if (pseudo.length > maxLength) {
+      pseudoInputInscription.style.borderColor = 'red';
+      return false;
   }
 
-  //ajout de sécurité :
-  if(passwordInput.value.toLowerCase().includes('script')) {
-    alert("C'est pas gentil d'être méchant");
-    location.reload();
+  // Vérifier les caractères spéciaux autorisés
+  if (!allowedSpecialChars.test(pseudo)) {
+      pseudoInputInscription.style.borderColor = 'red';
+      return false;
   }
+
+  // Interdire l'utilisation du mot "script"
+  if (pseudo.toLowerCase().includes('script')) {
+      alert("C'est pas gentil d'être méchant");
+      location.reload();
+      return false;
+  }
+
+  // Si toutes les conditions sont remplies
+  pseudoInputInscription.style.borderColor = 'green';
+  return true;
+}
+
+// Fonction pour valider l'email
+function validateEmail() {
+    const regexEmail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
+    if (regexEmail.test(loginInputInscription.value)) {
+        loginInputInscription.style.borderColor = 'green';
+        return true;
+    } else {
+        loginInputInscription.style.borderColor = 'red';
+        return false;
+    }
+}
+
+// Fonction pour valider le mot de passe
+function validatePassword() {
+    const password = passwordInputInscription.value;
+    let isValid = true;
+
+    if (password.length >= 6) {
+        conditionMessages[0].style.color = 'green';
+    } else {
+        conditionMessages[0].style.color = 'red';
+        isValid = false;
+    }
+
+    if (password.length <= 15) {
+        conditionMessages[1].style.color = 'green';
+    } else {
+        conditionMessages[1].style.color = 'red';
+        isValid = false;
+    }
+
+    if (/\d/.test(password)) {
+        conditionMessages[2].style.color = 'green';
+    } else {
+        conditionMessages[2].style.color = 'red';
+        isValid = false;
+    }
+
+    if (/[$&@!-_]/.test(password)) {
+        conditionMessages[3].style.color = 'green';
+    } else {
+        conditionMessages[3].style.color = 'red';
+        isValid = false;
+    }
+
+    if (/[A-Z]/.test(password)) {
+        conditionMessages[4].style.color = 'green';
+    } else {
+        conditionMessages[4].style.color = 'red';
+        isValid = false;
+    }
+
+    if (/^\S*$/.test(password)) {
+        conditionMessages[5].style.color = 'green';
+    } else {
+        conditionMessages[5].style.color = 'red';
+        isValid = false;
+    }
+
+    if (!["password", "123456", "qwerty", "azerty"].some(word => password.toLowerCase().includes(word))) {
+        conditionMessages[6].style.color = 'green';
+    } else {
+        conditionMessages[6].style.color = 'red';
+        isValid = false;
+    }
+
+    if (!password.toLowerCase().includes('script')) {
+        passwordInputInscription.style.borderColor = isValid ? 'green' : 'red';
+    } else {
+        alert("C'est pas gentil d'être méchant");
+        location.reload();
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+// Fonction pour valider la confirmation du mot de passe
+function validateConfirmPassword() {
+    const password = passwordInputInscription.value;
+    const confirmPassword = passwordInputConfirmInscription.value;
+
+    if (password !== "" && confirmPassword === password && confirmPassword.length <= 15 && /^\S*$/.test(confirmPassword)) {
+        passwordInputConfirmInscription.style.borderColor = 'green';
+        return true;
+    } else {
+        passwordInputConfirmInscription.style.borderColor = 'red';
+        return false;
+    }
+}
+
+// Fonction pour vérifier toutes les conditions et activer/désactiver le bouton
+function validateForm() {
+    const pseudoIsValid = validatePseudo();
+    const emailIsValid = validateEmail();
+    const passwordIsValid = validatePassword();
+    const confirmPasswordIsValid = passwordIsValid && validateConfirmPassword();
+
+
+    submitButtonInscription.disabled = !(pseudoIsValid && emailIsValid && passwordIsValid && confirmPasswordIsValid);
+}
+
+// Ajouter les événements `keyup` pour chaque champ d'entrée
+pseudoInputInscription.addEventListener('keyup', validateForm);
+loginInputInscription.addEventListener('keyup', validateForm);
+passwordInputInscription.addEventListener('keyup', validateForm);
+passwordInputConfirmInscription.addEventListener('keyup', validateForm);
+
+// Apparition/disparition des conditions en fonction du focus
+passwordInputInscription.addEventListener('focus', function() {
+    document.getElementById('userMessageInscription').style.opacity = 1;
+});
+
+passwordInputInscription.addEventListener('blur', function() {
+    document.getElementById('userMessageInscription').style.opacity = 0;
 });
 
 
-//apparition/disparition des conditions en fonction du focus
 
 
-passwordInput.addEventListener('focus', function() {
-  userMessage.style.opacity = 1;
-});
-
-passwordInput.addEventListener('blur', function() {
-  userMessage.style.opacity = 0;
-});

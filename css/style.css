@@ -134,7 +134,7 @@ main .separator {
     opacity: 0;
 }
 
-#connexion #userMessage {
+#connexion #userMessageConnexion {
     position: absolute;
     left: 70%;
     width: calc(150px + 12vw);
@@ -150,7 +150,7 @@ main .separator {
     opacity: 0;
 }
 
-#connexion #userMessage #listeCondition {
+#connexion #userMessageConnexion #listeCondition {
     margin: 10px 0px 0px 0px;
     display: flex;
     flex-direction: column;
@@ -161,3 +161,88 @@ main .separator {
 }
 
 /* -----------------INSCRIPTION----------------- */
+
+#inscription h1 {
+    margin: 10px;
+}
+
+#inscription div {
+    margin: 10px 0px 10px 0px;
+}
+
+#inscription h3 {
+    margin-bottom: 20px;
+}
+
+#contenair1 div:nth-child(1) input {
+    margin-bottom: 80px;
+}
+
+#inscription #contenair1 {
+    width: 60em;
+    height: auto;
+    background-color: rgb(141, 71, 9);
+    border: 3px solid rgb(69, 37, 1);
+    border-radius: 30px;
+    padding: 30px;
+    margin: 50px;
+    color: rgb(255, 255, 255);
+}
+
+#inscription #createPassword,#createID{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15%;
+}
+
+#inscription input {
+    width: calc(100px + 10vw);
+    height: calc(20px + 0.5vw);
+    border-radius: 5px;
+    border: 2px solid rgba(140, 76, 4, 1);
+    text-align: center;
+    font-size: 17px;
+}
+
+#inscription input::placeholder {
+    font-style: italic;
+    text-align: center;
+}
+
+#inscription input:focus {
+    border-color: rgb(243, 187, 124);
+    outline: none;
+}
+
+#inscription input:focus::placeholder {
+    opacity: 0;
+}
+
+#inscription #userMessageInscription {
+    position: absolute;
+    left: 70%;
+    top: 450px;
+    width: calc(150px + 12vw);
+    height: auto;
+    border: 3px solid rgba(140, 76, 4, 1);
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding: 20px;
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#inscription #userMessageInscription #listeConditionPassword {
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    color: red;
+}
