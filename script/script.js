@@ -75,6 +75,69 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //-----------------CONNEXION/INSCRIPTION------------------
 
+//CONNEXION
+const submitButtonConnexion = document.getElementById('submitButtonConnexion');
+
+const loginInputConnexion = document.querySelector('#inputEmailConnexion');
+const passwordInputConnexion = document.querySelector('#inputPasswordConnexion');
+
+// Désactiver le bouton de soumission au départ
+submitButtonConnexion.disabled = true;
+
+
+// Fonction pour valider l'email
+function validateEmailConnexion() {
+    const regexEmail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
+    if (regexEmail.test(loginInputConnexion.value)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+// Fonction pour vérifier toutes les conditions et activer/désactiver le bouton
+function validateFormConnexion() {
+    const emailIsValid = validateEmailConnexion();
+    const passwordIsValid = validatePasswordConnexion();
+
+    submitButtonConnexion.disabled = !(emailIsValid && passwordIsValid);
+}
+
+function validatePasswordConnexion() {
+    const password = passwordInputConnexion.value;
+    let isValid = true;
+
+    if (password.length < 5) {
+        isValid = false;
+    }
+
+    if (password.length > 15) {
+        isValid = false;
+    }
+
+    if (!/^\S*$/.test(password)) {
+        isValid = false;
+    }
+
+    if (password.toLowerCase().includes('script')) {
+        alert("C'est pas gentil d'être méchant");
+        location.reload();
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+// Ajouter les événements `keyup` pour chaque champ d'entrée
+loginInputConnexion.addEventListener('keyup', validateFormConnexion);
+passwordInputConnexion.addEventListener('keyup', validateFormConnexion);
+
+
+
+
+
+
 
 
 
@@ -100,7 +163,7 @@ function validatePseudo() {
   const pseudo = pseudoInputInscription.value;
   const maxLength = 15;
   const allowedSpecialChars = /^[a-zA-Z0-9&!_-]+$/;
-  
+
   // Vérifier la longueur du pseudo
   if (pseudo.length > maxLength) {
       pseudoInputInscription.style.borderColor = 'red';
@@ -217,7 +280,7 @@ function validateConfirmPassword() {
 }
 
 // Fonction pour vérifier toutes les conditions et activer/désactiver le bouton
-function validateForm() {
+function validateFormInscription() {
     const pseudoIsValid = validatePseudo();
     const emailIsValid = validateEmail();
     const passwordIsValid = validatePassword();
@@ -228,10 +291,10 @@ function validateForm() {
 }
 
 // Ajouter les événements `keyup` pour chaque champ d'entrée
-pseudoInputInscription.addEventListener('keyup', validateForm);
-loginInputInscription.addEventListener('keyup', validateForm);
-passwordInputInscription.addEventListener('keyup', validateForm);
-passwordInputConfirmInscription.addEventListener('keyup', validateForm);
+pseudoInputInscription.addEventListener('keyup', validateFormInscription);
+loginInputInscription.addEventListener('keyup', validateFormInscription);
+passwordInputInscription.addEventListener('keyup', validateFormInscription);
+passwordInputConfirmInscription.addEventListener('keyup', validateFormInscription);
 
 // Apparition/disparition des conditions en fonction du focus
 passwordInputInscription.addEventListener('focus', function() {
