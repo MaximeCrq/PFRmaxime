@@ -42,12 +42,29 @@ const passwordInputConnexion = document.querySelector('#inputPasswordConnexion')
 
 // Fonction pour valider l'email
 function validateEmailConnexion() {
+    const email = loginInputConnexion.value;
     const regexEmail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
-    if (regexEmail.test(loginInputConnexion.value)) {
-        return true;
-    } else {
-        return false;
+    let isValid = true;
+
+    if (!regexEmail.test(email)) {
+        isValid = false;
     }
+
+    if (email.length <= 4) {
+        isValid = false;
+    }
+
+    if (email.length > 30) {
+        isValid = false;
+    }
+
+    if (email.toLowerCase().includes('script')) {
+        alert("C'est pas gentil d'être méchant");
+        location.reload();
+        isValid = false;
+    }
+
+    return isValid;
 }
 
 
