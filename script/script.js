@@ -23,25 +23,3 @@ function loadCSS(href) {
   link.href = href;
   document.head.appendChild(link);
 }
-
-
-
-//------------------------ACCORDION(conseil)-----------------------
-const accordion = document.getElementsByClassName('accordion-item');
-const panel = document.getElementsByClassName('panel');
-
-//Initialiser en display none tout les paragraphes
-for (let i=0 ; i<panel.length ; i++) {
-  panel[i].style.display = 'none';
-}
-
-//
-for (let i=0 ; i<panel.length ; i++) {
-  accordion[i].addEventListener('click', function(){
-    if (panel[i].style.display == 'none') {
-      panel[i].style.display = 'block';
-    } else {
-      panel[i].style.display = 'none';
-    }
-  })
-}

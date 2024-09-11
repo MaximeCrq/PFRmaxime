@@ -62,6 +62,25 @@ main .separator {
     border: 1px solid aliceblue;
     margin-top: 1em;
     margin-bottom: 1em;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    .indiceEtat {
+        font-size: calc(30px + 0.5vw);
+        font-weight: bolder;
+        position: absolute;
+        margin-left: 90%;
+        margin-top: auto;
+    }
+}
+
+.conseil .accordion .accordion-item:hover {
+    border: 3px solid rgb(69, 37, 1);
+    background-color: rgb(207, 106, 17);
 }
 
 .conseil .accordion .panel {
