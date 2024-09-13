@@ -94,7 +94,7 @@ document.querySelector(`.indicator-button-image${1}`).style.backgroundColor = 'w
 
 //----fonction des boutons indicators----
 
-//fonction 1 -- modif position
+//fonction 1 -- modif position image
 for (let i=1 ; i<=nbrImg ; i++){
     document.querySelector(`.indicator-button-image${i}`).addEventListener('click', function() {
         let pos = (-600)*(i-1);
