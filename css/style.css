@@ -53,6 +53,13 @@ main .separator {
 }
 
 /* -----------------CONSEIL----------------- */
+.conseil .accordion article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .conseil .accordion .accordion-item {
     width: 60em;

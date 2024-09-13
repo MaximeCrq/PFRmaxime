@@ -152,7 +152,7 @@ main:nth-child(2) {
     margin-top: 100px;  /*espacement apres le carousel (selectionnne le premier separator)*/
 }
 
-main section {
+main #featured-images {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -162,6 +162,32 @@ main section {
     h2 , p { 
         padding: 10px 20% 10px 20%; /*haut droite bas gauche*/
     }
+}
+
+main .welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 25% 100px 25%;
+    gap: calc(30px + 5vw);
+    img {
+        width: calc(400px + 5vw);
+        height: auto;
+    }
+    .presentation {
+        text-align: start;
+        overflow-wrap: break-word;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(10px + 0.5vw);
+    }
+}
+
+main #welcome2 {
+    flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 800px) {
@@ -222,7 +248,7 @@ main .carousel {
     background-color: black;
 }
 
-/* -----------------FOOTER----------------- */
+
 
 /* -----------------FOOTER----------------- */
 
