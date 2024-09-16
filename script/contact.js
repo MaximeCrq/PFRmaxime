@@ -2,26 +2,31 @@ const submitButtonContact = document.getElementById('submitButtonContact');
 
 submitButtonContact.disabled = true;
 
-const loginInputContact = document.querySelector('#inputEmailContact');
+const emailInputContact = document.querySelector('#inputEmailContact');
 const objetInputContact = document.querySelector('#inputObjetContact');
 const descriptionInputContact = document.querySelector('#inputDescriptionContact')
 
 
-
 // Fonction pour valider l'email
 function validateEmail() {
-    const login = loginInputContact.value;
+    const email = emailInputContact.value;
     const regexEmail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
 
     //Vérifier les caractères spéciaux autorisés
-    if (!regexEmail.test(login)) {
-        loginInputContact.style.borderColor = 'red';
+    if (!regexEmail.test(email)) {
+        emailInputContact.style.borderColor = 'red';
         return false;
     }
 
     //Interdire l'utilisation du mot "script"
-    if (login.toLowerCase().includes('script')) {
+    if (email.toLowerCase().includes('script')) {
         alert("C'est pas gentil d'être méchant");
+        location.reload();
+        return false;
+    }
+
+    if (email.toLowerCase().includes('pascal')) {
+        alert(`Attention ! <br> Vous désignez une personne insignifiante`);
         location.reload();
         return false;
     }
@@ -35,18 +40,22 @@ function validateEmail() {
 function validateObjet() {
     const objet = objetInputContact.value;
     const maxLength = 30;
-    const allowedSpecialChars = /^[a-zA-Z+-/_-]+$/;
+    const allowedSpecialChars = /^[a-zA-Z+-/_-]$/;
 
     //Vérifier la longueur de l'objet
     if (objet.length > maxLength) {
         objetInputContact.style.borderColor = 'red';
         return false;
+    } else {
+        emailInputContact.style.borderColor = 'green';
     }
 
     //Vérifier les caractères spéciaux autorisés
     if (!allowedSpecialChars.test(objet)) {
         objetInputContact.style.borderColor = 'red';
         return false;
+    } else {
+        emailInputContact.style.borderColor = 'green';
     }
 
     //Interdire l'utilisation du mot "script"
@@ -91,13 +100,17 @@ function validateDescription() {
 }
 
 
-// Fonction pour vérifier toutes les conditions et activer/désactiver le bouton
+//Fonction pour vérifier toutes les conditions et activer/désactiver le bouton
 function validateFormContact() {
-    const loginIsValid = validateLogin();
     const emailIsValid = validateEmail();
+    const objetIsValid = validateObjet();
     const descriptionIsValid = validateDescription();
 
-    submitButtonContact.disabled = !(loginIsValid && emailIsValid && descriptionIsValid);
+    submitButtonContact.disabled = !(emailIsValid && objetIsValid && descriptionIsValid);
 }
 
-pseudo
+
+//Ajout des événements 'keyup' pour chaque champ d'entrée (x3)
+emailInputContact.addEventListener('keyup', validateFormContact);
+objetInputContact.addEventListener('keyup', validateFormContact);
+descriptionInputContact.addEventListener('keyup', validateFormContact);

@@ -109,6 +109,13 @@ main .separator {
 /* -----------------CONTACT----------------- */
 
 #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact #container-contact{
     color: aliceblue;
     width: calc(100px + 60%);
     height: auto;
@@ -121,14 +128,15 @@ main .separator {
     gap: 70px;
     border-radius: 30px;
     border: 2px solid rgb(207, 106, 17);
+    margin: 50px;
 }
 
-#contact section {
+#contact #container-contact section {
     width: 100%;
     height: auto;
 }
 
-#contact section textarea{
+#contact #container-contact section input,textarea{
     width: 400px;
     height: 20px;
     text-align: center;
@@ -138,7 +146,7 @@ main .separator {
     padding-top: 5px;
 }
 
-#contact section:nth-child(3) textarea {
+#contact #container-contact section:nth-child(3) textarea {
     height: 90px;
 }
 
@@ -224,7 +232,7 @@ main .separator {
 
 /*BOUTON CONFIRMATION INSC/CONN*/
 
-#submitButtonConnexion,#submitButtonInscription {
+#submitButtonConnexion,#submitButtonInscription,#submitButtonContact {
     width: 200px;
     height: 50px;
     background-color: rgba(140, 76, 4, 1);
@@ -237,7 +245,7 @@ main .separator {
 }
 
 
-#submitButtonConnexion:hover, #submitButtonInscription:hover {
+#submitButtonConnexion:hover, #submitButtonInscription:hover, #submitButtonContact:hover {
     background-color: rgb(255, 255, 255);
     color: rgba(140, 76, 4, 1);
 }
