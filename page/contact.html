@@ -2,7 +2,6 @@
 <html lang="fr"> 
     <head> 
         <meta charset="UTF-8">
-        <!--AFFICHAGE TELEPHONE-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/header.css">
@@ -15,11 +14,25 @@
         <header></header>
 
         <main>
-            <div class="contact">
-
+            <div id="contact">
+                <section>
+                    <h2>E-mail</h2>
+                    <textarea id="#inputEmailContact"></textarea>
+                </section>
+                <section>
+                    <h2>Objet</h2>
+                    <textarea id="inputObjetContact"></textarea>
+                </section>
+                <section>
+                    <h2>Description</h2>
+                    <textarea id="inputDescriptionContact"></textarea>
+                </section>
+                <button id="submitButtonContact">ENVOYER</button>
             </div>
         </main>
 
         <footer></footer>
     </body>
+
+    <script src="../script/contact.js"></script>
 </html>

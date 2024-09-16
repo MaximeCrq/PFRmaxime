@@ -106,7 +106,41 @@ main .separator {
 
 /* -----------------PHOTO----------------- */
 
-/* -----------------FAQ----------------- */
+/* -----------------CONTACT----------------- */
+
+#contact {
+    color: aliceblue;
+    width: calc(100px + 60%);
+    height: auto;
+    background-color: rgb(69, 37, 1);
+    padding: 50px 30px 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    border-radius: 30px;
+    border: 2px solid rgb(207, 106, 17);
+}
+
+#contact section {
+    width: 100%;
+    height: auto;
+}
+
+#contact section textarea{
+    width: 400px;
+    height: 20px;
+    text-align: center;
+    overflow-wrap: break-word;
+    resize: none;
+    font-size: calc(10px + 0.2vw);
+    padding-top: 5px;
+}
+
+#contact section:nth-child(3) textarea {
+    height: 90px;
+}
 
 /* -----------------CONNEXION----------------- */
 
