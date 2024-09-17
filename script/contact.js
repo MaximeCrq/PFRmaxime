@@ -16,6 +16,8 @@ function validateEmail() {
     if (!regexEmail.test(email)) {
         emailInputContact.style.borderColor = 'red';
         return false;
+    } else {
+        emailInputContact.style.borderColor = 'green';
     }
 
     //Interdire l'utilisation du mot "script"
@@ -26,7 +28,7 @@ function validateEmail() {
     }
 
     if (email.toLowerCase().includes('pascal')) {
-        alert(`Attention ! <br> Vous désignez une personne insignifiante`);
+        alert("Attention ! <br> Vous désignez une personne insignifiante");
         location.reload();
         return false;
     }
@@ -40,14 +42,14 @@ function validateEmail() {
 function validateObjet() {
     const objet = objetInputContact.value;
     const maxLength = 30;
-    const allowedSpecialChars = /^[a-zA-Z+-/_-]$/;
+    const allowedSpecialChars = /[a-zA-Z+-/_-]$/;
 
     //Vérifier la longueur de l'objet
     if (objet.length > maxLength) {
         objetInputContact.style.borderColor = 'red';
         return false;
     } else {
-        emailInputContact.style.borderColor = 'green';
+        objetInputContact.style.borderColor = 'green';
     }
 
     //Vérifier les caractères spéciaux autorisés
@@ -55,7 +57,7 @@ function validateObjet() {
         objetInputContact.style.borderColor = 'red';
         return false;
     } else {
-        emailInputContact.style.borderColor = 'green';
+        objetInputContact.style.borderColor = 'green';
     }
 
     //Interdire l'utilisation du mot "script"
@@ -74,18 +76,22 @@ function validateObjet() {
 function validateDescription() {
     const description = descriptionInputContact.value;
     const maxLength = 1000;
-    const allowedSpecialChars = /^[a-zA-Z0-9.,;:!?'"çèéùà^¨*()+-/_-]+$/;
+    const allowedSpecialChars = /[a-zA-Z0-9.,;:!?'"çèéùà^¨*()+-/_-]$/;
 
     //Vérifier la longueur de l'description
     if (description.length > maxLength) {
         descriptionInputContact.style.borderColor = 'red';
         return false;
+    } else {
+        descriptionInputContact.style.borderColor = 'green';
     }
 
     //Vérifier les caractères spéciaux autorisés
     if (!allowedSpecialChars.test(description)) {
         descriptionInputContact.style.borderColor = 'red';
         return false;
+    } else {
+        descriptionInputContact.style.borderColor = 'green';
     }
 
     //Interdire l'utilisation du mot "script"

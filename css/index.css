@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+/* indicateur position dans le site */
+header nav ul:nth-child(3) li:nth-child(1) a {
+    border-bottom: 3px solid rgb(201, 124, 29);
+}
+
 /* -----------------HEADER----------------- */
 header {
     position: sticky;
@@ -24,12 +29,13 @@ header a h1 {
 header a {
     text-decoration: none;
     color: aliceblue;
+    padding: 5px;
 }
 
 header nav {
     width: 100%;
     height: 7vw;
-    background-color: rgb(141, 71, 9);
+    background-color: rgb(36, 22, 6);
     display: grid;
     grid-template-columns: repeat(4, 15vw 15vw 45vw 25vw);
     grid-template-rows: repeat(3, 1fr);
@@ -133,7 +139,6 @@ html, body {
 
 main {
     margin: 0 auto;
-    margin-top: 100px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -142,14 +147,10 @@ main {
 }
 
 main .separator {
-    margin: 30px 0px 30px 0px;
+    margin: 100px 0px 100px 0px;
     background-color: brown;
     width: 300px;
     height: 4px;
-}
-
-main:nth-child(2) { 
-    margin-top: 100px;  /*espacement apres le carousel (selectionnne le premier separator)*/
 }
 
 main #featured-images {
@@ -159,23 +160,30 @@ main #featured-images {
     justify-content: center;
     text-align: center;
     overflow-wrap: break-word; /* Assurez-vous que le texte se retourne et ne dépasse pas */
-    h2 , p { 
-        padding: 10px 20% 10px 20%; /*haut droite bas gauche*/
-    }
 }
 
 main .welcome {
+    width: 70%;
+    height: 700px;
+    background-image: url('../image/image-chien-3.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 80%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 100px 25% 100px 25%;
     gap: calc(30px + 5vw);
     img {
-        width: calc(400px + 5vw);
-        height: auto;
+        width: auto;
+        height: calc(300px + 20vw);
     }
     .presentation {
+        border: 3px solid black;
+        margin-bottom: 100px;
+        padding: 20px;
+        margin-left: calc(100px + 20vw);
+        background-color: rgb(255, 253, 250);
         text-align: start;
         overflow-wrap: break-word;
         display: flex;
@@ -187,18 +195,48 @@ main .welcome {
 }
 
 main #welcome2 {
+    margin-bottom: 0;
+    margin-top: 100px;
     flex-direction: row-reverse;
+    background-image: url('../image/image-chien-5.jpg');
+    background-position: right;
+    .presentation {
+        margin-left: 0;
+        margin-right: calc(100px + 20vw);
+    }
 }
 
 @media screen and (max-width: 800px) {
     body main {
         font-size: 17px;
     }
+    main {
+        background-image: url('../image/image-chien-11.jpg');
+        background-size: cover;
+    }
+    main .welcome {
+        width: 80%;
+        background-image: none;
+    }
+    main .welcome .presentation {
+        margin-left: 0;
+    }
+    main #welcome2 {
+        width: 80%;
+        background-image: none;
+    }
+    main #welcome2 .presentation{
+        margin-right: 0;
+    }
+    main .separator {
+        display: none;
+    }
 }
 
 /* -----------------MAIN-CAROUSEL----------------- */
 
 main .carousel {
+    margin-top: 8vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -237,9 +275,6 @@ main .carousel {
     transition: all 0.5s ease-out;
 }
 
-/* #carousel-indicators {
-    background-color: aqua;
-} */
 
 #carousel-indicators button {
     margin: 10px;
@@ -248,7 +283,25 @@ main .carousel {
     background-color: black;
 }
 
-
+@media screen and (max-width: 800px) {
+    main .carousel {
+        position: relative;
+        margin-top: 15vw;
+    }
+    main .carousel .carousel-button {
+        margin: 0;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+    main .carousel #prev-button {
+        right: 80%;
+        z-index: 1;
+    }
+    main .carousel #next-button {
+        left: 80%;
+    }
+}
 
 /* -----------------FOOTER----------------- */
 
@@ -349,6 +402,9 @@ footer .footer-2 ul li:not(:nth-child(1)) {
 }
 
 @media screen and (max-width: 800px) {
+    footer {
+        margin-top: 0;
+    }
     footer .footer-1 ul:nth-child(1) {
         display: none;
     }

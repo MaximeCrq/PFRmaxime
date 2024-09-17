@@ -1,3 +1,26 @@
+/* Indicateur position sur le site */
+
+#body-map header nav ul:nth-child(3) li:nth-child(2) a {
+    border-bottom: 3px solid rgb(201, 124, 29);
+}
+
+#body-conseil header nav ul:nth-child(3) li:nth-child(3) a {
+    border-bottom: 3px solid rgb(201, 124, 29);
+}
+
+#body-photo header nav ul:nth-child(3) li:nth-child(4) a {
+    border-bottom: 3px solid rgb(201, 124, 29);
+}
+
+#body-connexion header nav ul:nth-child(5) li:nth-child(1) a {
+    border-bottom: 3px solid rgb(201, 124, 29);
+}
+
+#body-inscription header nav ul:nth-child(5) li:nth-child(2) a {
+    border-bottom: 3px solid rgb(201, 124, 29);
+}
+
+
 /* -----------------ALL----------------- */
 
 * {
@@ -29,8 +52,7 @@ main section {
     text-align: center;
     overflow-wrap: break-word; /*le texte se retourne et ne dépasse pas */
     h2 , p { 
-        padding: 10px 20% 10px 20%; 
-        /*haut droite bas gauche*/
+        padding: 10px 20% 10px 20%;
     }
 }
 
@@ -117,17 +139,16 @@ main .separator {
 
 #contact #container-contact{
     color: aliceblue;
-    width: calc(100px + 60%);
+    width: calc(100px + 40%);
     height: auto;
-    background-color: rgb(69, 37, 1);
+    background-color: rgb(36, 22, 6);
     padding: 50px 30px 50px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 70px;
-    border-radius: 30px;
-    border: 2px solid rgb(207, 106, 17);
+    border: 2px solid rgb(23, 11, 0);
     margin: 50px;
 }
 
@@ -137,7 +158,7 @@ main .separator {
 }
 
 #contact #container-contact section input,textarea{
-    width: 400px;
+    width: calc(100px + 20vw);
     height: 20px;
     text-align: center;
     overflow-wrap: break-word;
@@ -147,6 +168,7 @@ main .separator {
 }
 
 #contact #container-contact section:nth-child(3) textarea {
+    width: calc(200px + 20vw);
     height: 90px;
 }
 
