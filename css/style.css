@@ -180,42 +180,42 @@ main .separator {
 }
 
 /* -----------------PHOTO----------------- */
+
 #photo {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-content: center;
-    background: #60c4ff;
+    width: 100%;
+    height: auto;
+    background-color: rgb(25, 0, 255);
+    padding: 150px 0 150px 0;
 }
 
-.section-photo {
-    --s: 150px; /* control the size */
-    --g: 10px;  /* control the gap */
-    --f: 1.5;   /* control the scale factor */
-    
+#photo #section-photo {
+    width: auto;
+    height: auto;
     display: grid;
-    gap: var(--g);
-    width: calc(3*var(--s) + 2*var(--g));
-    aspect-ratio: 1;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(4,auto);
+    gap: 10px;
+    padding: 20px;
+    background-color: aqua;
 }
-  
-.gallery > img {
-    width: 0;
-    height: 0;
-    min-height: 100%;
-    min-width: 100%;
+
+#photo #section-photo img {
+    width: 250px;
+    height: 250px;
     object-fit: cover;
-    cursor: pointer;
-    filter: grayscale(80%);
-    transition: .35s linear;
+    filter: grayscale(90%);
+    transition: 0.35s linear;
 }
 
-.section-photo img:hover{
+#photo #section-photo img:hover {
+    transform: scale(2);
     filter: grayscale(0);
-    width:  calc(var(--s)*var(--f));
-    height: calc(var(--s)*var(--f));
+    z-index: 1;
 }
+
+
+
+
+
  
 /* -----------------CONTACT----------------- */
 
