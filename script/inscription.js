@@ -1,6 +1,6 @@
 //------------Ajout du header et du footer sur les pages------------
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('./autre/header.html')
+    fetch('./autre/header.php')
         .then(response => response.text())
         .then(data => {
             document.querySelector('header').innerHTML = data;
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error('Erreur lors du chargement du header:', error));
 
-    fetch('./autre/footer.html')
+    fetch('./autre/footer.php')
         .then(response => response.text())
         .then(data => {
             document.querySelector('footer').innerHTML = data;

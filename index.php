@@ -5,28 +5,28 @@
         <!--AFFICHAGE TELEPHONE-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/index.css">
-        <title>accueil</title>
+        <title>TouTouTrajet - Accueil</title>
     </head> 
 
     <body>
         <header>
             <nav>
-                <a href="./index.html" class="header-element" id="logo-toutoutrajet">
+                <a href="./index.php" class="header-element" id="logo-toutoutrajet">
                     <img src="./image/logo-toutoutrajet-2.png" alt="logo du site du projet">
                 </a>
-                <a href="./index.html" class="header-element" id="titre-toutoutrajet">
+                <a href="./index.php" class="header-element" id="titre-toutoutrajet">
                     <h1>TouTouTrajet</h1>
                 </a>
                 <ul class="header-element" id="liste-1">
-                    <li><a href="./index.html" id="prout">ACCUEIL</a></li>
-                    <li><a href="./page/carte.html">CARTE</a></li>
-                    <li><a href="./page/conseil.html">CONSEIL</a></li>
-                    <li><a href="./page/photo.html">PHOTO</a></li>
+                    <li><a href="./index.php" id="prout">ACCUEIL</a></li>
+                    <li><a href="./view/carte.php">CARTE</a></li>
+                    <li><a href="./view/conseil.php">CONSEIL</a></li>
+                    <li><a href="./view/photo.php">PHOTO</a></li>
                 </ul>
                 <div></div>
                 <ul class="header-element" id="liste-2">
-                    <li><a href="./page/connexion.html">CONNEXION</a></li>
-                    <li><a href="./page/inscription.html">INSCRIPTION</a></li>
+                    <li><a href="./view/connexion.php">CONNEXION</a></li>
+                    <li><a href="./view/inscription.php">INSCRIPTION</a></li>
                 </ul>
             </nav>
         </header>
@@ -132,13 +132,13 @@
                 </ul>
                 <ul>
                     <li><h4>Navigation</h4></li>
-                    <li><a href="accueil">Accueil</a></li>
-                    <li><a href="./page/carte.html">Carte</a></li>
-                    <li><a href="./page/conseil.html">Conseil</a></li>
-                    <li><a href="./page/photo.html">Photo</a></li>
+                    <li><a href="./index.php">Accueil</a></li>
+                    <li><a href="./view/carte.php">Carte</a></li>
+                    <li><a href="./view/conseil.php">Conseil</a></li>
+                    <li><a href="./view/photo.php">Photo</a></li>
                 </ul>
                 <ul>
-                    <li><a href="./page/contact.html">Nous contacter</a></li>
+                    <li><a href="./view/contact.php">Nous contacter</a></li>
                     <li><a href="">Premier pas sur TouTouTrajet</a></li>
                 </ul>
                 <div class="liste-reseaux-sociaux">

@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <title>photo</title>
+        <title>TouTouTrajet - Photo</title>
         <script src="../script/script.js" defer></script>
     </head> 
 

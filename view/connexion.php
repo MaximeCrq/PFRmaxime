@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <title>connexion</title>
+        <title>TouTouTrajet - Connexion</title>
     </head>
 
     <body id="body-connexion">

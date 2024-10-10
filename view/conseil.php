@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <title>conseil</title>
+        <title>TouTouTrajet - Conseil</title>
         <script src="../script/script.js" defer></script>
     </head> 
 
