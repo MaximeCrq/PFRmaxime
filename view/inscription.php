@@ -49,7 +49,7 @@
 
         <footer></footer>
 
-        <script src="../script/headFoot.js"></script>
+        <!-- <script src="../script/headFoot.js"></script> -->
         <script src="../script/inscription.js"></script>
     </body>
 </html>

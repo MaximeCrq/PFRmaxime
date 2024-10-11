@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr"> 
-    <head> 
-        <meta charset="UTF-8">
-        <!--AFFICHAGE TELEPHONE-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/index.css">
-        <title>TouTouTrajet - Accueil</title>
-    </head> 
-
-    <body>
-        <header>
-            <nav>
-                <a href="./index.php" class="header-element" id="logo-toutoutrajet">
-                    <img src="./image/logo-toutoutrajet-2.png" alt="logo du site du projet">
-                </a>
-                <a href="./index.php" class="header-element" id="titre-toutoutrajet">
-                    <h1>TouTouTrajet</h1>
-                </a>
-                <ul class="header-element" id="liste-1">
-                    <li><a href="./index.php" id="prout">ACCUEIL</a></li>
-                    <li><a href="./view/carte.php">CARTE</a></li>
-                    <li><a href="./view/conseil.php">CONSEIL</a></li>
-                    <li><a href="./view/photo.php">PHOTO</a></li>
-                </ul>
-                <div></div>
-                <ul class="header-element" id="liste-2">
-                    <li><a href="./view/connexion.php">CONNEXION</a></li>
-                    <li><a href="./view/inscription.php">INSCRIPTION</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
+        <main id="main_accueil">
             <section id="featured-images">
                 
                 <div class="carousel">
@@ -102,7 +69,7 @@
 
             <div class="separator"></div>
 
-            <section class="welcome" id="welcome2">
+            <section class="welcome" id="welcome1">
                 <div class="presentation">
                     <h2>Explorez les meilleurs lieux de promenade pour chiens</h2>
                     <p>
@@ -123,39 +90,3 @@
                 </div>
             </section>
         </main>
-
-        <footer>
-            <div class="footer-1">
-                <ul>
-                    <li><h4>TouTouTrajet</h4></li>
-                    <li><img src="./image/logo-toutoutrajet-2.png" alt="logo du site du projet"></li>
-                </ul>
-                <ul>
-                    <li><h4>Navigation</h4></li>
-                    <li><a href="./index.php">Accueil</a></li>
-                    <li><a href="./view/carte.php">Carte</a></li>
-                    <li><a href="./view/conseil.php">Conseil</a></li>
-                    <li><a href="./view/photo.php">Photo</a></li>
-                </ul>
-                <ul>
-                    <li><a href="./view/contact.php">Nous contacter</a></li>
-                    <li><a href="">Premier pas sur TouTouTrajet</a></li>
-                </ul>
-                <div class="liste-reseaux-sociaux">
-                    <a href="https://www.instagram.com/" target="_blank"><img src="./image/logo-instagram.png" alt="lien vers le compte de TouTouTrajet sur Instagram"></a>
-                    <a href="https://x.com/?lang=fr" target="_blank"><img src="./image/logo-twitter.webp" alt="lien vers le compte de TouTouTrajet Twitter"></a>
-                    <a href="https://www.facebook.com/?locale=fr_FR" target="_blank"><img src="./image/logo-facebook.png" alt="lien vers le compte de TouTouTrajet Facebook"></a>
-                </div>
-            </div>
-            <div class="footer-2">
-                <ul>
-                    <li>Copyright @ 2024-2025 - Tous droits réservés.</li>
-                    <li>Mentions légales</li>
-                    <li>CGV</li>
-                </ul>
-            </div>
-        </footer>
-
-        <script src="./script/index.js"></script>
-    </body>
-</html>

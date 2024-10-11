@@ -1,6 +1,6 @@
 <?php
 
-class ManagerInscription{
+class ManagerInscription extends ModelInscription{
     //METHODE relation BDD
     public function addUser(){
         //chemin de la bdd

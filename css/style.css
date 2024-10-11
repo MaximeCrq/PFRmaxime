@@ -66,6 +66,132 @@ main .separator {
     }
 }
 
+/* ----------------ACCUEIL---------------- */
+
+#main_accueil #featured-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: break-word; /* Assurez-vous que le texte se retourne et ne dépasse pas */
+}
+
+#main_accueil .welcome {
+    width: 70%;
+    height: 700px;
+    background-image: url('../image/image-chien-3.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: calc(30px + 5vw);
+    img {
+        width: auto;
+        height: calc(300px + 20vw);
+    }
+    .presentation {
+        border: 3px solid black;
+        margin-bottom: 100px;
+        padding: 20px;
+        margin-left: calc(100px + 20vw);
+        background-color: rgb(255, 253, 250);
+        text-align: start;
+        overflow-wrap: break-word;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(10px + 0.5vw);
+    }
+}
+
+#main_accueil #welcome1 {
+    margin-bottom: 0;
+    margin-top: 100px;
+    flex-direction: row-reverse;
+    background-image: url('../image/image-chien-5.jpg');
+    background-position: right;
+    .presentation {
+        margin-left: 0;
+        margin-right: calc(100px + 20vw);
+    }
+}
+
+/* CARROUSEL */
+
+#main_accueil .carousel {
+    margin-top: 8vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#main_accueil .carousel .carousel-button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#main_accueil .carousel #prev-button {
+    transform: rotate(180deg);
+}
+
+#main_accueil .carousel-items article img {
+    width: 598px;
+    height: 298px; /*on enleve 2 px pour prendre en compte la taille de la "border"*/
+    border: 1px solid black;
+}
+
+#main_accueil .carousel-items {
+    overflow: hidden;
+    background-color: rgb(183, 221, 221);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 340px;
+}
+
+#main_accueil .carousel-items > * {
+    position: absolute;
+    transition: all 0.5s ease-out;
+}
+
+
+#main_accueil #carousel-indicators button {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+
+/* CHANGEMENT de l'affichage en fonction taille écran (1 ou 2) */
+@media screen and (max-width: 800px) {
+    #main_accueil .carousel {
+        position: relative;
+        margin-top: 15vw;
+    }
+    #main_accueil .carousel .carousel-button {
+        margin: 0;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+    #main_accueil .carousel #prev-button {
+        right: 80%;
+        z-index: 1;
+    }
+    #main_accueil .carousel #next-button {
+        left: 80%;
+    }
+}
+
 /* -----------------CARTE----------------- */
 
 #main-map {
@@ -77,7 +203,7 @@ main .separator {
     width: 60%;
 }
 
-/* -----------------CONSEIL----------------- */
+/* ----------------CONSEIL---------------- */
 .conseil {
     margin-top: 0;
 }

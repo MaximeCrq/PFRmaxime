@@ -1,8 +1,77 @@
+<?php
+session_start();
+
+//J'inclus le fichier contenant mes fonctions utilitaires
+include './utils/function_sanitize.php';
+include './controller/controller_header.php';
+
+ //Analyse de l'URL avec parse_url() et retourne ses composants
+ $url = parse_url($_SERVER['REQUEST_URI']);
+ //test soit l'url a une route sinon on renvoi à la racine
+ $path = isset($url['path']) ? $url['path'] : '/';
+
+ /*--------------------------ROUTER -----------------------------*/
+ //test de la valeur $path dans l'URL et import de la ressource
+ switch($path){
+    //index
+    case $path === "/PFRmaxime/" :
+        include './controller/controller_accueil.php';
+        include './view/autre/header.php';
+        include './view/accueil.php';
+        include './view/autre/footer.php';
+        break ;
+    //accueil
+    case $path === "/PFRmaxime/accueil":
+        include './view/autre/header.php';
+        include './view/accueil.php';
+        include './view/autre/footer.php';
+        break ;
+    //inscription
+    case $path === "/PFRmaxime/inscription":
+        include './model/model_inscription.php';
+        include './manager/manager_inscription.php';
+        include './controller/controller_inscription.php/';
+        include './view/autre/header.php';
+        include './view/inscription.php';
+        include './view/autre/footer.php';
+        break;
+    //deconnexion
+    case $path === "/PFRmaxime/deconnexion":
+        include './controller/deconnexion.php';
+        break;
+    //erreur_404
+    default:
+        include './view/autre/error.php';
+        break;
+ }
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <!DOCTYPE html>
 <html lang="fr"> 
     <head> 
         <meta charset="UTF-8">
-        <!--AFFICHAGE TELEPHONE-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/index.css">
         <title>TouTouTrajet - Accueil</title>
@@ -159,3 +228,4 @@
         <script src="./script/index.js"></script>
     </body>
 </html>
+-->

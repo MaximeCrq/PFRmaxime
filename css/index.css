@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-/* indicateur position dans le site */
+/* indicateur position dans le site
 header nav ul:nth-child(3) li:nth-child(1) a {
     border-bottom: 3px solid rgb(201, 124, 29);
 }
@@ -256,10 +256,10 @@ main .carousel {
 
 .carousel-items article img {
     width: 598px;
-    height: 298px; /*on enleve 2 px pour prendre en compte la taille de la "border"*/
+    height: 298px; 
     border: 1px solid black;
 }
-
+ /*on enleve 2 px pour prendre en compte la taille de la "border"*/
 .carousel-items {
     overflow: hidden;
     background-color: rgb(183, 221, 221);
