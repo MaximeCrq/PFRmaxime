@@ -194,11 +194,11 @@ main .separator {
 
 /* -----------------CARTE----------------- */
 
-#main-map {
+#main_map {
     margin-top: 5%;
 }
 
-#map {
+#main_map #map {
     height: calc(100px + 30vw);
     width: 60%;
 }

@@ -1,14 +1,8 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
 }
 
-/* indicateur position dans le site
-header nav ul:nth-child(3) li:nth-child(1) a {
-    border-bottom: 3px solid rgb(201, 124, 29);
-}
-
-/* -----------------HEADER----------------- */
 header {
     position: sticky;
     top: 0;
@@ -129,9 +123,6 @@ header li:hover {
 }
 
 
-/* -----------------MAIN----------------- */
-
-/* pas de défilement horizontal + taille texte adaptative avec l'ajout de 10px */
 html, body {
     overflow-x: hidden;
     font-size: calc(10px + 0.4vw);
@@ -159,7 +150,7 @@ main #featured-images {
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow-wrap: break-word; /* Assurez-vous que le texte se retourne et ne dépasse pas */
+    overflow-wrap: break-word;
 }
 
 main .welcome {
@@ -233,7 +224,6 @@ main #welcome2 {
     }
 }
 
-/* -----------------MAIN-CAROUSEL----------------- */
 
 main .carousel {
     margin-top: 8vw;
@@ -259,7 +249,7 @@ main .carousel {
     height: 298px; 
     border: 1px solid black;
 }
- /*on enleve 2 px pour prendre en compte la taille de la "border"*/
+
 .carousel-items {
     overflow: hidden;
     background-color: rgb(183, 221, 221);
@@ -302,8 +292,6 @@ main .carousel {
         left: 80%;
     }
 }
-
-/* -----------------FOOTER----------------- */
 
 footer {
     width: 100%;
@@ -421,4 +409,4 @@ footer .footer-2 ul li:not(:nth-child(1)) {
         margin-left: 1em;
         margin-right: 1em;
     }
-}
+} */

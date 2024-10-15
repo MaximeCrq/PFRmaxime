@@ -4,7 +4,7 @@ session_start();
 
 //J'inclus le fichier contenant mes fonctions utilitaires
 include './utils/function_sanitize.php';
-include './controller/controller_header.php';
+//include './controller/controller_header.php';
 
  //Analyse de l'URL avec parse_url() et retourne ses composants
  $url = parse_url($_SERVER['REQUEST_URI']);
@@ -72,7 +72,12 @@ include './controller/controller_header.php';
         include './controller/deconnexion.php';
         break;
     //contact
-
+    case $path === '/PFRmaxime/contact':
+        $script='contact';
+        include './view/autre/header.php';
+        include './view/contact.php';
+        include './view/autre/footer.php';
+        break;
     //erreur_404
     default:
         include './view/autre/error.php';

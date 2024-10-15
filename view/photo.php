@@ -1,6 +1,3 @@
-    <body id="body-photo">
-        <header></header>
-    
         <main id="photo">
             <section id="section-photo">
                 <img src="./image/photo/photo1.jpg" id="photo1">

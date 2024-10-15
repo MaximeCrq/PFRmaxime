@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr"> 
-    <head> 
-        <meta charset="UTF-8">
-        <!--AFFICHAGE TELEPHONE-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <title>TouTouTrajet - Conseil</title>
-        <script src="../script/script.js" defer></script>
-    </head> 
-
-    <body id="body-conseil">
-        <header></header>
-
         <main class="conseil">
             <section>
                 <article>
@@ -128,9 +112,3 @@
 
             <p class="conclusion">En suivant ces conseils généraux, vous pouvez vous assurer que chaque promenade avec votre chien est une expérience positive et enrichissante, tant pour vous que pour votre compagnon à quatre pattes.</p>
         </main>
-
-        <footer></footer>
-    </body>
-
-    <script src="../script/conseil.js"></script>
-</html>

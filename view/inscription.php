@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr"> 
-    <head> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <title>TouTouTrajet - Inscription</title>
-    </head> 
-
-    <body id="body-inscription">
-        <header></header>
-
         <main id="inscription">
             <h1>INSCRIPTION</h1>
             <div id="contenair">
@@ -46,10 +32,3 @@
                 </div>
             </article>
         </main>
-
-        <footer></footer>
-
-        <!-- <script src="../script/headFoot.js"></script> -->
-        <script src="../script/inscription.js"></script>
-    </body>
-</html>
