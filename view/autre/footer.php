@@ -2,17 +2,17 @@
             <div class="footer-1">
                 <ul>
                     <li><h4>TouTouTrajet</h4></li>
-                    <li><a href="../index.php"><img src="./image/logo-toutoutrajet-2.png" alt="logo du site du projet"></a></li>
+                    <li><a href="/PFRmaxime/accueil"><img src="./image/logo-toutoutrajet-2.png" alt="logo du site du projet"></a></li>
                 </ul>
                 <ul>
                     <li><h4>Navigation</h4></li>
-                    <li><a href="../index.php">Accueil</a></li>
-                    <li><a href="./carte.php">Carte</a></li>
-                    <li><a href="./conseil.php">Conseil</a></li>
-                    <li><a href="./photo.php">Photo</a></li>
+                    <li><a href="/PFRmaxime/accueil">Accueil</a></li>
+                    <li><a href="/PFRmaxime/carte">Carte</a></li>
+                    <li><a href="/PFRmaxime/conseil">Conseil</a></li>
+                    <li><a href="/PFRmaxime/photo">Photo</a></li>
                 </ul>
                 <ul>
-                    <li><a href="./contact.php">Nous contacter</a></li>
+                    <li><a href="/PFRmaxime/contact">Nous contacter</a></li>
                     <li><a href="">Premier pas sur TouTouTrajet</a></li>
                 </ul>
                 <div class="liste-reseaux-sociaux">

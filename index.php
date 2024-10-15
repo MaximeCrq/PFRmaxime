@@ -1,4 +1,5 @@
 <?php
+//Start de la super global session
 session_start();
 
 //J'inclus le fichier contenant mes fonctions utilitaires
@@ -59,8 +60,8 @@ include './controller/controller_header.php';
     //inscription
     case $path === "/PFRmaxime/inscription":
         $script='inscription';
-        include './model/model_inscription.php';
-        include './manager/manager_inscription.php';
+        // include './model/model_inscription.php';
+        // include './manager/manager_inscription.php';
         include './controller/controller_inscription.php/';
         include './view/autre/header.php';
         include './view/inscription.php';
