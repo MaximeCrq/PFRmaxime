@@ -15,6 +15,7 @@ include './controller/controller_header.php';
  switch($path){
     //index
     case $path === "/PFRmaxime/" :
+        $script='accueil';
         include './controller/controller_accueil.php';
         include './view/autre/header.php';
         include './view/accueil.php';
@@ -22,12 +23,42 @@ include './controller/controller_header.php';
         break ;
     //accueil
     case $path === "/PFRmaxime/accueil":
+        $script='accueil';
         include './view/autre/header.php';
         include './view/accueil.php';
         include './view/autre/footer.php';
         break ;
+    //carte
+    case $path === '/PFRmaxime/carte':
+        $script='carte';
+        include './view/autre/header.php';
+        include './view/carte.php';
+        include './view/autre/footer.php';
+        break;
+    //conseil
+    case $path === '/PFRmaxime/conseil':
+        $script='conseil';
+        include './view/autre/header.php';
+        include './view/conseil.php';
+        include './view/autre/footer.php';
+        break;
+    //photo
+    case $path === '/PFRmaxime/photo':
+        $script='photo';
+        include './view/autre/header.php';
+        include './view/photo.php';
+        include './view/autre/footer.php';
+        break;
+    //connexion
+    case $path === '/PFRmaxime/connexion':
+        $script='connexion';
+        include './view/autre/header.php';
+        include './view/connexion.php';
+        include './view/autre/footer.php';
+        break;
     //inscription
     case $path === "/PFRmaxime/inscription":
+        $script='inscription';
         include './model/model_inscription.php';
         include './manager/manager_inscription.php';
         include './controller/controller_inscription.php/';
@@ -39,6 +70,8 @@ include './controller/controller_header.php';
     case $path === "/PFRmaxime/deconnexion":
         include './controller/deconnexion.php';
         break;
+    //contact
+
     //erreur_404
     default:
         include './view/autre/error.php';
