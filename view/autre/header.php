@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/footer.css">
-        <!-- <link rel="stylesheet" href="./css/index.css"> -->
         <title>TouTouTrajet - Accueil</title>
         <?php echo "<script src='./script/{$script}.js' defer></script> " ; ?>
     </head>
