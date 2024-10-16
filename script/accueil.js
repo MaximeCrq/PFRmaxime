@@ -2,7 +2,6 @@
 const bPrev = document.querySelector('#prev-button');
 const bNext = document.querySelector('#next-button');
 
-
 //------------------------------------------------
 //WARNING, mettre a jour la variable nbrImg 
 //et le HTML (rajouter/enlever) article (carousel-item-?)
@@ -10,7 +9,6 @@ let nbrImg = 5;
 //------------------------------------------------
 //Valeur du décalage entre les images (donc de leur width)
 const gapImg = 600;
-
 
 let tab = [];
 for (let i=1 ; i<=nbrImg ; i++){
@@ -24,8 +22,6 @@ let positionImages = 0;//valeur du positionnement actuelle des images
 position();
 bPrev.addEventListener('click', prev);
 bNext.addEventListener('click', next);
-
-
 
 function position() {
     for (let i=1 ; i<=nbrImg ; i++){
