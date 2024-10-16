@@ -1,4 +1,5 @@
 <?php 
+    
 
 class ModelInscription {
     //ATTRIBUT
@@ -53,8 +54,19 @@ class ModelInscription {
             return $this;
     }
 
-    //CONSTRUCT (objet)
-    public function __construct(int $id_user){
-        $this->id_user=$id_user;
+//CONSTRUCT (objet)
+    public function __construct(int $login_user){
+        $this->login_user=$login_user;
+    }
+    //récupération d'ip, 'REMOTE_ADDR' normalement suffit, mais si l'utilisateur utilise un proxy on doit utiliser les 2 suivantes:
+    public function getIp(){
+        if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+                $ip = $_SERVER['HTTP_CLIENT_IP'];
+        }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+                $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        }else{
+                $ip = $_SERVER['REMOTE_ADDR'];
+        }
+        return $ip;
     }
 }

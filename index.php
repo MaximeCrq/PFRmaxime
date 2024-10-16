@@ -60,9 +60,10 @@ include './utils/function_sanitize.php';
     //inscription
     case $path === "/PFRmaxime/inscription":
         $script='inscription';
-        // include './model/model_inscription.php';
-        // include './manager/manager_inscription.php';
+        include './model/model_inscription.php';
+        include './manager/manager_inscription.php';
         include './controller/controller_inscription.php/';
+        $controlerInscription = new ControllerInscription();
         include './view/autre/header.php';
         include './view/inscription.php';
         include './view/autre/footer.php';
