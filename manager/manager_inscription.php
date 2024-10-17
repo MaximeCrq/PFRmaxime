@@ -4,7 +4,7 @@ class ManagerInscription extends ModelInscription{
     //METHODE relation BDD
     public function addUser(){
         //1 chemin de la bdd
-        $bdd = new PDO('mysql:host=localhost;dbname=pfr','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        $bdd = new PDO('mysql:host=localhost;dbname=toutoutrajet','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
         //recuperation des attributs
         $login_user=$this->getLoginUser();
@@ -41,7 +41,7 @@ class ManagerInscription extends ModelInscription{
     //Return : array | string
     function readUserByLogin():array | string{
         //1Er Etape : Instancier l'objet de connexion PDO
-        $bdd = new PDO('mysql:host=localhost;dbname=task5','root','root',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        $bdd = new PDO('mysql:host=localhost;dbname=toutoutrajet','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
         //Récupération du login depuis l'objet
         $login_user = $this->getLoginUser();
@@ -49,7 +49,7 @@ class ManagerInscription extends ModelInscription{
         //Try...Catch
         try{
             //2nd Etape : préparer ma requête SELECT
-            $req = $bdd->prepare('SELECT id_user, name_user, first_name_user, login_user, mdp_user FROM users WHERE login_user = ?');
+            $req = $bdd->prepare('SELECT id_user, login_user, mail_user, password_user FROM users WHERE login_user = ?');
 
             //3Eme Etape : introduire le login de l'utilisateur dans ma requête avec du Binding de Paramètre
             $req->bindParam(1,$login_user,PDO::PARAM_STR);

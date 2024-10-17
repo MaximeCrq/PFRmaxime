@@ -55,7 +55,7 @@ class ModelInscription {
     }
 
 //CONSTRUCT (objet)
-    public function __construct(int $login_user){
+    public function __construct($login_user){
         $this->login_user=$login_user;
     }
     //récupération d'ip, 'REMOTE_ADDR' normalement suffit, mais si l'utilisateur utilise un proxy on doit utiliser les 2 suivantes:
