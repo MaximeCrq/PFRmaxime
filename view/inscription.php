@@ -22,7 +22,7 @@
                 <button id="submitButtonInscription" name="inscription" >CONFIRMATION</button>
             </form>
 
-            <p><?php echo $controlerInscription->getMessage() ?></p>
+            <p><?php echo $controllerInscription->getMessage() ?></p>
 
             <article id="userMessageInscription">
                 <h4>Condition du Mot de passe :</h4>

@@ -2,8 +2,9 @@
 //Start de la super global session
 session_start();
 
-//J'inclus le fichier contenant mes fonctions utilitaires
+//Fonction utilitaire
 include './utils/function_sanitize.php';
+include './utils/function_getIp.php';
 //include './controller/controller_header.php';
 
  //Analyse de l'URL avec parse_url() et retourne ses composants
@@ -17,7 +18,7 @@ include './utils/function_sanitize.php';
     //index
     case $path === "/PFRmaxime/" :
         $script='accueil';
-        include './controller/controller_accueil.php';
+        //include './controller/controller_accueil.php';
         include './view/autre/header.php';
         include './view/accueil.php';
         include './view/autre/footer.php';
@@ -63,9 +64,9 @@ include './utils/function_sanitize.php';
         include './model/model_inscription.php';
         include './manager/manager_inscription.php';
         include './controller/controller_inscription.php';
-        $controlerInscription = new ControllerInscription();
-        $controlerInscription->dataTestInscription();
-        $controlerInscription->registerUser();
+        $controllerInscription = new ControllerInscription();
+        $controllerInscription->dataTestInscription();
+        $controllerInscription->registerUser();
         include './view/autre/header.php';
         include './view/inscription.php';
         include './view/autre/footer.php';

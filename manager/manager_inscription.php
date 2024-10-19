@@ -11,7 +11,7 @@ class ManagerInscription extends ModelInscription{
         $mail_user=$this->getMailUser();
         $password_user=$this->getPasswordUser();
         //recuperation de l'ip
-        $ip=$this->getip();
+        $ip=getip();
 
         //Try...Catch...récupération des données
         try{
