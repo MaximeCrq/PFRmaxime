@@ -11,7 +11,7 @@ include './utils/function_getIp.php';
  $url = parse_url($_SERVER['REQUEST_URI']);
  //test soit l'url a une route sinon on renvoi à la racine
  $path = isset($url['path']) ? $url['path'] : '/';
-
+ 
  /*--------------------------ROUTER -----------------------------*/
  //test de la valeur $path dans l'URL et import de la ressource
  switch($path){

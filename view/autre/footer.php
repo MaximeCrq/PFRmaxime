@@ -16,9 +16,9 @@
                     <li><a href="">Premier pas sur TouTouTrajet</a></li>
                 </ul>
                 <div class="liste-reseaux-sociaux">
-                    <a><img src="./image/logo-instagram.png" alt="lien vers le compte de TouTouTrajet sur Instagram"></a>
-                    <a><img src="./image/logo-twitter.webp" alt="lien vers le compte de TouTouTrajet Twitter"></a>
-                    <a><img src="./image/logo-facebook.png" alt="lien vers le compte de TouTouTrajet Facebook"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="./image/logo-instagram.png" alt="lien vers le compte de TouTouTrajet sur Instagram"></a>
+                    <a href="https://www.twitter.com/" target="_blank"><img src="./image/logo-twitter.webp" alt="lien vers le compte de TouTouTrajet Twitter"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="./image/logo-facebook.png" alt="lien vers le compte de TouTouTrajet Facebook"></a>
                 </div>
             </div>
             <div class="footer-2">

@@ -310,7 +310,6 @@ main .separator {
 #photo {
     width: 100%;
     height: auto;
-    background-color: rgb(25, 0, 255);
     padding: 150px 0 150px 0;
 }
 
@@ -321,7 +320,6 @@ main .separator {
     grid-template-columns: repeat(4,auto);
     gap: 10px;
     padding: 20px;
-    background-color: aqua;
 }
 
 #photo #section-photo img {

@@ -69,8 +69,11 @@ header ul li {
 
 
 header li:hover {
-    background-color: rgba(110, 68, 13, 0.3);
-    outline: 3px solid rgba(255, 181, 97, 0.5);
+    background-color: #FFE4C3;
+    outline: 3px solid #FFE4C3;
+    a {
+        color: #2B1A0C;
+    }
 }
 
 @media screen and (max-width: 800px) {
