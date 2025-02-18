@@ -12,7 +12,6 @@
             justify-content: center;
             height: 100vh;
             text-align: center;
-            font-family: Arial, sans-serif;
         }
 
         .error-code {
