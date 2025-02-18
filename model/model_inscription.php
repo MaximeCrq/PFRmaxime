@@ -10,7 +10,7 @@ class ModelInscription {
     private ?string $ip_user;
     private ?int $date_inscription_user;
 
-    //GETTER / SETTER
+    //GETTER et SETTER
     public function getIdUser(): ?int {
             return $this->id_user;
     }

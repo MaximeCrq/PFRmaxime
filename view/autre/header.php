@@ -8,10 +8,11 @@
         <link rel="stylesheet" href="./css/footer.css">
         <title>TouTouTrajet - Accueil</title>
         <?php echo "<script src='./script/{$script}.js' defer></script> " ; ?>
+        <?php echo "<script src='./script/headFoot.js' defer></script> " ; ?>
     </head>
     <body>
-        <header>
-            <nav>
+        <header id="header">
+            <nav id="header_nav">
                 <a href="/PFRmaxime/accueil" class="header-element" id="logo-toutoutrajet">
                     <img src="./image/logo-toutoutrajet-2.png" alt="logo du site du projet">
                 </a>
@@ -24,10 +25,12 @@
                     <li><a href="/PFRmaxime/conseil">CONSEIL</a></li>
                     <li><a href="/PFRmaxime/photo">PHOTO</a></li>
                 </ul>
-                <div></div>
+                <div id="separator_nav"></div>
                 <ul class="header-element" id="liste-2">
                     <li><a href="/PFRmaxime/connexion">CONNEXION</a></li>
                     <li><a href="/PFRmaxime/inscription">INSCRIPTION</a></li>
                 </ul>
             </nav>
+            <img src="./image/menu-icon1.png" alt="icon d'ouverture du menu" id="menu-icon1">
+            <img src="./image/menu-icon2.png" alt="icon de fermeture du menu" id="menu-icon2">
         </header>

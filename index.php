@@ -82,6 +82,20 @@ include './utils/function_getIp.php';
         include './view/contact.php';
         include './view/autre/footer.php';
         break;
+    //Mentions legales
+    case $path === '/PFRmaxime/mentions_legales':
+        $script='mentions_legales';
+        include './view/autre/header.php';
+        include './view/mentions_legales.php';
+        include './view/autre/footer.php';
+        break;
+    //CGV
+    case $path === '/PFRmaxime/CGV':
+        $script='cgv';
+        include './view/autre/header.php';
+        include './view/cgv.php';
+        include './view/autre/footer.php';
+        break;
     //erreur_404
     default:
         include './view/autre/error.php';

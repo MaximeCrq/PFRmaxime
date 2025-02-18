@@ -44,7 +44,7 @@
 
             <div class="separator separator1"></div>
 
-            <section class="welcome">
+            <section class="welcome" id="welcome0">
                 <div class="presentation">
                     <p>
                         <strong style="font-size: calc(10px + 1vw);">Bienvenue</strong> sur notre site dédié aux passionnés de chiens et aux amoureux des promenades en plein air !

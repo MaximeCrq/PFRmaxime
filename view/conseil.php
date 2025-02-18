@@ -26,7 +26,8 @@
                 <article>
                     <button class="accordion-item">
                         <h3>Respectez les règles locales</h3>
-                        <span class="indiceEtat" style="        font-size: calc(30px + 0.5vw);
+                        <span class="indiceEtat" style="
+                        font-size: calc(30px + 0.5vw);
                         font-weight: bolder;
                         position: absolute;
                         margin-left: 90%;
@@ -40,7 +41,8 @@
                 <article>
                     <button class="accordion-item">
                         <h3>Utilisez une laisse appropriée</h3>
-                        <span class="indiceEtat" style="        font-size: calc(30px + 0.5vw);
+                        <span class="indiceEtat" style="
+                        font-size: calc(30px + 0.5vw);
                         font-weight: bolder;
                         position: absolute;
                         margin-left: 90%;
@@ -54,7 +56,8 @@
                 <article>
                     <button class="accordion-item">
                         <h3>Restez hydraté</h3>
-                        <span class="indiceEtat" style="        font-size: calc(30px + 0.5vw);
+                        <span class="indiceEtat" style="
+                        font-size: calc(30px + 0.5vw);
                         font-weight: bolder;
                         position: absolute;
                         margin-left: 90%;
@@ -68,7 +71,8 @@
                 <article>
                     <button class="accordion-item">
                         <h3>Ramassez les déjections</h3>
-                        <span class="indiceEtat" style="        font-size: calc(30px + 0.5vw);
+                        <span class="indiceEtat" style="
+                        font-size: calc(30px + 0.5vw);
                         font-weight: bolder;
                         position: absolute;
                         margin-left: 90%;
@@ -82,7 +86,8 @@
                 <article>
                     <button class="accordion-item">
                         <h3>Surveillez les signes de fatigue</h3>
-                        <span class="indiceEtat" style="        font-size: calc(30px + 0.5vw);
+                        <span class="indiceEtat" style="
+                        font-size: calc(30px + 0.5vw);
                         font-weight: bolder;
                         position: absolute;
                         margin-left: 90%;
@@ -96,7 +101,8 @@
                 <article>
                     <button class="accordion-item">
                         <h3>Choisissez des itinéraires adaptés</h3>
-                        <span class="indiceEtat" style="        font-size: calc(30px + 0.5vw);
+                        <span class="indiceEtat" style="
+                        font-size: calc(30px + 0.5vw);
                         font-weight: bolder;
                         position: absolute;
                         margin-left: 90%;

@@ -93,10 +93,13 @@ footer .footer-2 {
 }
 
 footer .footer-2 ul li:not(:nth-child(1)) {
-    color: rgb(228, 189, 118);
+    a {
+        text-decoration: none;
+        color: rgb(228, 189, 118);
+    }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
     footer .footer-1 ul:nth-child(1) {
         display: none;
     }

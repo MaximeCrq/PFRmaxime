@@ -24,8 +24,8 @@
             <div class="footer-2">
                 <ul>
                     <li>Copyright @ 2024-2025 - Tous droits réservés.</li>
-                    <li>Mentions légales</li>
-                    <li>CGV</li>
+                    <li><a href="/PFRmaxime/mentions_legales">Mentions légales</a></li>
+                    <li><a href="/PFRmaxime/CGV">CGV</a></li>
                 </ul>
             </div>
         </footer>

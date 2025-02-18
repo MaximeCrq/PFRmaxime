@@ -1,25 +1,30 @@
-// //------------Ajout du header et du footer sur les pages------------
-// document.addEventListener("DOMContentLoaded", function() {
-//     fetch('./autre/header.php')
-//         .then(response => response.text())
-//         .then(data => {
-//             document.querySelector('header').innerHTML = data;
-//             loadCSS('../css/header.css');
-//         })
-//         .catch(error => console.error('Erreur lors du chargement du header:', error));
+const menuIcon1 = document.getElementById('menu-icon1');
+const menuIcon2 = document.getElementById('menu-icon2');
 
-//     fetch('./autre/footer.php')
-//         .then(response => response.text())
-//         .then(data => {
-//             document.querySelector('footer').innerHTML = data;
-//             loadCSS('../css/footer.css');
-//         })
-//         .catch(error => console.error('Erreur lors du chargement du footer:', error));
-// });
-// //chargement des fichiers CSS
-// function loadCSS(href) {
-//   let link = document.createElement("link");
-//   link.rel = "stylesheet";
-//   link.href = href;
-//   document.head.appendChild(link);
-// }
+const nav1 = document.getElementById('liste-1');
+const nav2 = document.getElementById('liste-2');
+
+const header_nav = document.getElementById('header_nav');
+
+const header = document.getElementById('header');
+
+function openMenu(){
+    nav1.style.display = 'flex';
+    nav2.style.display = 'flex';
+    menuIcon1.style.display = 'none';
+    menuIcon2.style.display = 'block';
+    header_nav.style.height = '70vw';
+    header.style.marginBottom = '60vw';
+}
+
+function closeMenu(){
+    nav1.style.display = 'none';
+    nav2.style.display = 'none';
+    menuIcon1.style.display = 'block';
+    menuIcon2.style.display = 'none';
+    header_nav.style.height = '24vw';
+    header.style.marginBottom = '0vw';
+}
+
+menuIcon1.addEventListener('click', openMenu)
+menuIcon2.addEventListener('click', closeMenu)
