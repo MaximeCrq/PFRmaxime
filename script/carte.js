@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const markerParis = L.marker([48.8566, 2.3522]).addTo(map);
   
     //ajout popup au marqueur
-    markerParis.bindPopup("<b>NOM</b><br>sous-titre").openPopup();
+    markerParis.bindPopup("<b>Promenade1</b><br>Grand parcs").openPopup();
   });
   
   
