@@ -1,4 +1,4 @@
-        <main id="inscription">
+        <main id="main_inscription">
             <h1>INSCRIPTION</h1>
             <form action="" method="POST">
                 <div id="contenair">
