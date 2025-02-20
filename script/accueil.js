@@ -8,7 +8,10 @@ const bNext = document.querySelector('#next-button');
 let nbrImg = 5;
 //------------------------------------------------
 //Valeur du décalage entre les images (donc de leur width)
-const gapImg = 600;
+let gapImg = ((screen.width/100)*60);
+if (screen.width<700) {
+    gapImg = ((screen.width/100)*80);
+}
 
 let tab = [];
 for (let i=1 ; i<=nbrImg ; i++){

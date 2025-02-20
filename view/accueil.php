@@ -9,27 +9,27 @@
                     
                         <article id="carousel-item-1">
                             <img src="./image/carousel/image1.jpg" alt="Description de l'image 1" class="carousel-image">
-                            <h3 class="image-title">Titre1</h3>
+                            <!-- <h3 class="image-title">Titre1</h3> -->
                         </article>
                         
                         <article id="carousel-item-2">
                             <img src="./image/carousel/image2.jpg" alt="Description de l'image 2" class="carousel-image">
-                            <h3 class="image-title">Titre2</h3>
+                            <!-- <h3 class="image-title">Titre2</h3> -->
                         </article>
 
                         <article id="carousel-item-3">
                             <img src="./image/carousel/image3.jpg" alt="Description de l'image 3" class="carousel-image">
-                            <h3 class="image-title">Titre3</h3>
+                            <!-- <h3 class="image-title">Titre3</h3> -->
                         </article>
 
                         <article id="carousel-item-4">
                             <img src="./image/carousel/image4.jpg" alt="Description de l'image 4" class="carousel-image">
-                            <h3 class="image-title">Titre4</h3>
+                            <!-- <h3 class="image-title">Titre4</h3> -->
                         </article>
                         
                         <article id="carousel-item-5">
                             <img src="./image/carousel/image5.jpg" alt="Description de l'image 5" class="carousel-image">
-                            <h3 class="image-title">Titre5</h3>
+                            <!-- <h3 class="image-title">Titre5</h3> -->
                         </article>
 
                     </div>

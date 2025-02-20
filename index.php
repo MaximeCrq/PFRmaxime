@@ -96,7 +96,11 @@ $header = new ControlerHeader();
     //compte
     case $path === "/PFRmaxime/compte":
         $script='compte';
+        include './model/model_user.php';
+        include './manager/manager_user.php';
         include './controller/controller_compte.php';
+        $moncompte = new ControlerCompte();
+        $moncompte->displayUserAccount();
         $header->displayNav();
         include './view/autre/header.php';
         include './view/compte.php';

@@ -147,7 +147,7 @@ class ControllerUser {
                                 $_SESSION['mail_user'] = $data[0]['mail_user'];
                                 $_SESSION['login_user'] = $data[0]['login_user'];
                                 
-                                $this->setMessageCo("{$_SESSION['login_user']} est connecté avec succés !");
+                                $this->setMessageCo("<br><h3>Bienvenue {$_SESSION['login_user']} !</h3>");
                             }
                         }
                     }
