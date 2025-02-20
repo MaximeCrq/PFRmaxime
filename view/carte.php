@@ -1,8 +1,8 @@
         <!--CARTE-->
         <!-- Leaflet CSS -->
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+        <link rel="stylesheet" href="./leaflet/leaflet.css"/>
         <!-- Leaflet JS -->
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script src="./leaflet/leaflet.js"></script>
 
         <main id="main_map">
             <div id="map"></div>

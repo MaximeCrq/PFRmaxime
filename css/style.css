@@ -254,12 +254,12 @@ main .separator {
 /* -----------------CARTE----------------- */
 
 #main_map {
-    margin-top: 5%;
+    margin-top: 6vw;
 }
 
 #main_map #map {
     height: calc(100px + 30vw);
-    width: 60%;
+    width: calc(100px + 40vw);
 }
 
 /* ----------------CONSEIL---------------- */
