@@ -20,6 +20,10 @@
     border-bottom: 3px solid rgb(201, 124, 29);
 }
 
+/* class displayNone (afficher/enlever bouton en fonction de si l'utilisateur est connecte */
+.displayNone{
+    display: none;
+}
 
 /* -----------------ALL----------------- */
 
@@ -299,8 +303,9 @@ main .separator {
 }
 
 #main_conseil .accordion .accordion-item:hover {
-    border: 3px solid rgb(69, 37, 1);
-    background-color: rgb(36, 22, 6);
+    border: 3px solid #2B1A0C;
+    background-color: #FFE4C3;
+    color: #2B1A0C;
 }
 
 #main_conseil .accordion .panel {
@@ -593,6 +598,12 @@ main .separator {
         width: calc(150px + 20vw);
     }
 }
+
+/* -----------------COMPTE----------------- */
+#main_compte {
+    margin-top: 5%;
+}
+
 
 
 

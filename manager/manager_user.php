@@ -1,6 +1,6 @@
 <?php
 
-class ManagerInscription extends ModelInscription{
+class ManagerUser extends ModelUser{
     //METHODE relation BDD
     public function addUser(){
         //1 chemin de la bdd
@@ -34,12 +34,35 @@ class ManagerInscription extends ModelInscription{
         }
     }
 
+    //Fonction pour récupérer tous les utilisateurs en BDD
+    //Param : void
+    //Return : array | string
+    public function readUsers():array | string{
+        //1Er Etape : Instancier l'objet de connexion PDO
+        $bdd = new PDO('mysql:host=localhost;dbname=toutoutrajet','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
+        //Try...Catch
+        try{
+            //2nd Etape : préparer ma requête SELECT
+            $req = $bdd->prepare('SELECT id_user, login_user, password_user FROM users');
+
+            //3eme Etape : executer la requête
+            $req->execute();
+
+            //4eme Etape : Récupère les réponses de la BDD
+            $data = $req->fetchAll(PDO::FETCH_ASSOC);
+
+            //5eme Etape : je retourne mes $data
+            return $data;
+        }catch(EXCEPTION $error){
+            return $error->getMessage();
+        }
+    }
 
     //Fonction pour récupérer un utilisateurs en BDD selon un login précis
     //Param : string
     //Return : array | string
-    function readUserByLogin():array | string{
+    public function readUserByLogin():array | string{
         //1Er Etape : Instancier l'objet de connexion PDO
         $bdd = new PDO('mysql:host=localhost;dbname=toutoutrajet','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
@@ -68,6 +91,32 @@ class ManagerInscription extends ModelInscription{
     }
 
 
-    //Faire de même pour les adresses mail
+    public function readUserByMail():array | string{
+        //1Er Etape : Instancier l'objet de connexion PDO
+        $bdd = new PDO('mysql:host=localhost;dbname=toutoutrajet','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+        //Récupération du Mail depuis l'objet
+        $mail_user = $this->getMailUser();
+
+        //Try...Catch
+        try{
+            //2nd Etape : préparer ma requête SELECT
+            $req = $bdd->prepare('SELECT id_user, login_user, mail_user, password_user FROM users WHERE mail_user = ?');
+
+            //3Eme Etape : introduire le mail de l'utilisateur dans ma requête avec du Binding de Paramètre
+            $req->bindParam(1,$mail_user,PDO::PARAM_STR);
+
+            //4eme Etape : executer la requête
+            $req->execute();
+
+            //5eme Etape : Récupère les réponses de la BDD
+            $data = $req->fetchAll(PDO::FETCH_ASSOC);
+
+            //6eme Etape : je retourne mes $data
+            return $data;
+        }catch(EXCEPTION $error){
+            return $error->getMessage();
+        }
+    }
     
 }

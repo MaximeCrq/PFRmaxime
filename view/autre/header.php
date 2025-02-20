@@ -28,8 +28,9 @@
                 </ul>
                 <div id="separator_nav"></div>
                 <ul class="header-element" id="liste-2">
-                    <li><a href="/PFRmaxime/connexion">CONNEXION</a></li>
-                    <li><a href="/PFRmaxime/inscription">INSCRIPTION</a></li>
+                <li><a href="/PFRmaxime/connexion" class="<?php echo $header->getButtonDeco() ?>">CONNEXION</a></li>
+                    <li><a href="/PFRmaxime/inscription" class="<?php echo $header->getButtonDeco() ?>">INSCRIPTION</a></li>
+                    <li><a href="/PFRmaxime/compte" class="<?php echo $header->getButtonCo() ?>">COMPTE</a></li>
                 </ul>
             </nav>
             <img src="./image/menu-icon1.png" alt="icon d'ouverture du menu" id="menu-icon1">

@@ -5,7 +5,11 @@ session_start();
 //Fonction utilitaire
 include './utils/function_sanitize.php';
 include './utils/function_getIp.php';
-//include './controller/controller_header.php';
+include './controller/controller_header.php';
+
+//Je crée les objets commun à toutes les routes
+//J'instancie mon header
+$header = new ControlerHeader();
 
  //Analyse de l'URL avec parse_url() et retourne ses composants
  $url = parse_url($_SERVER['REQUEST_URI']);
@@ -18,7 +22,7 @@ include './utils/function_getIp.php';
     //index
     case $path === "/PFRmaxime/" :
         $script='accueil';
-        //include './controller/controller_accueil.php';
+        $header->displayNav();
         include './view/autre/header.php';
         include './view/accueil.php';
         include './view/autre/footer.php';
@@ -26,6 +30,7 @@ include './utils/function_getIp.php';
     //accueil
     case $path === "/PFRmaxime/accueil":
         $script='accueil';
+        $header->displayNav();
         include './view/autre/header.php';
         include './view/accueil.php';
         include './view/autre/footer.php';
@@ -33,6 +38,7 @@ include './utils/function_getIp.php';
     //carte
     case $path === '/PFRmaxime/carte':
         $script='carte';
+        $header->displayNav();
         include './view/autre/header.php';
         include './view/carte.php';
         include './view/autre/footer.php';
@@ -40,6 +46,7 @@ include './utils/function_getIp.php';
     //conseil
     case $path === '/PFRmaxime/conseil':
         $script='conseil';
+        $header->displayNav();
         include './view/autre/header.php';
         include './view/conseil.php';
         include './view/autre/footer.php';
@@ -47,6 +54,7 @@ include './utils/function_getIp.php';
     //photo
     case $path === '/PFRmaxime/photo':
         $script='photo';
+        $header->displayNav();
         include './view/autre/header.php';
         include './view/photo.php';
         include './view/autre/footer.php';
@@ -54,6 +62,13 @@ include './utils/function_getIp.php';
     //connexion
     case $path === '/PFRmaxime/connexion':
         $script='connexion';
+        include './model/model_user.php';
+        include './manager/manager_user.php';
+        include './controller/controller_user.php';
+        $controllerConnexion = new ControllerUser();
+        $controllerConnexion->dataTestConnexion();
+        $controllerConnexion->logInUser();
+        $header->displayNav();
         include './view/autre/header.php';
         include './view/connexion.php';
         include './view/autre/footer.php';
@@ -61,23 +76,36 @@ include './utils/function_getIp.php';
     //inscription
     case $path === "/PFRmaxime/inscription":
         $script='inscription';
-        include './model/model_inscription.php';
-        include './manager/manager_inscription.php';
-        include './controller/controller_inscription.php';
-        $controllerInscription = new ControllerInscription();
+        include './model/model_user.php';
+        include './manager/manager_user.php';
+        include './controller/controller_user.php';
+        $controllerInscription = new ControllerUser();
         $controllerInscription->dataTestInscription();
         $controllerInscription->registerUser();
+        $header->displayNav();
         include './view/autre/header.php';
         include './view/inscription.php';
         include './view/autre/footer.php';
         break;
     //deconnexion
     case $path === "/PFRmaxime/deconnexion":
-        include './controller/deconnexion.php';
+        include './controller/controller_deconnexion.php';
+        $deco = new Deconnexion();
+        $deco->deco();
+        break;
+    //compte
+    case $path === "/PFRmaxime/compte":
+        $script='compte';
+        include './controller/controller_compte.php';
+        $header->displayNav();
+        include './view/autre/header.php';
+        include './view/compte.php';
+        include './view/autre/footer.php';
         break;
     //contact
     case $path === '/PFRmaxime/contact':
         $script='contact';
+        $header->displayNav();
         include './view/autre/header.php';
         include './view/contact.php';
         include './view/autre/footer.php';
@@ -85,6 +113,7 @@ include './utils/function_getIp.php';
     //Mentions legales
     case $path === '/PFRmaxime/mentions_legales':
         $script='mentions_legales';
+        $header->displayNav();
         include './view/autre/header.php';
         include './view/mentions_legales.php';
         include './view/autre/footer.php';
@@ -92,6 +121,7 @@ include './utils/function_getIp.php';
     //CGV
     case $path === '/PFRmaxime/CGV':
         $script='cgv';
+        $header->displayNav();
         include './view/autre/header.php';
         include './view/cgv.php';
         include './view/autre/footer.php';

@@ -1,7 +1,7 @@
 <?php 
     
 
-class ModelInscription {
+class ModelUser {
     //ATTRIBUT
     private ?int $id_user;
     private ?string $login_user;
@@ -55,7 +55,7 @@ class ModelInscription {
     }
 
 //CONSTRUCT (objet)
-    public function __construct($login_user){
-        $this->login_user=$login_user;
+    public function __construct($mail_user){
+        $this->mail_user=$mail_user;
     }
 }
